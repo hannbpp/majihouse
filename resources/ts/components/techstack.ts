@@ -20,7 +20,14 @@ export class TechStackMarquee {
 
         if (!this.container || !this.marquee) return;
 
-        // Calculate max translate (half the width since content is duplicated)
+        // Clone all items for seamless loop
+        const items = this.marquee.querySelectorAll('.tech-item');
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            this.marquee?.appendChild(clone);
+        });
+
+        // Calculate max translate (half the width since content is now duplicated)
         this.maxTranslate = this.marquee.scrollWidth / 2;
 
         // Stop CSS animation and use JS instead

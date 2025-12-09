@@ -75,7 +75,7 @@ export class ContactForm {
     }
 
     private initSubmission(): void {
-        this.form?.addEventListener('submit', async (e) => {
+        this.form?.addEventListener('submit', (e) => {
             e.preventDefault();
 
             // Validate all fields
@@ -90,20 +90,42 @@ export class ContactForm {
 
             if (!isValid) return;
 
-            // Show loading state
-            this.submitBtn?.classList.add('loading');
+            // Get form data
+            const name = (this.form?.querySelector('#name') as HTMLInputElement)?.value || '';
+            const email = (this.form?.querySelector('#email') as HTMLInputElement)?.value || '';
+            const phone = (this.form?.querySelector('#phone') as HTMLInputElement)?.value || '';
+            const serviceEl = this.form?.querySelector('#service') as HTMLSelectElement;
+            const service = serviceEl?.options[serviceEl.selectedIndex]?.text || '';
+            const budgetEl = this.form?.querySelector('#budget') as HTMLSelectElement;
+            const budget = budgetEl?.options[budgetEl.selectedIndex]?.text || '';
+            const message = (this.form?.querySelector('#message') as HTMLTextAreaElement)?.value || '';
 
-            try {
-                // Simulate API call
-                await new Promise(resolve => setTimeout(resolve, 2000));
+            // Build WhatsApp message
+            const waMessage = `*Halo MAJIHOUSE!* 👋
 
-                // Show success
-                this.showSuccess();
-            } catch {
-                this.showToast('Something went wrong. Please try again.', 'error');
-            } finally {
-                this.submitBtn?.classList.remove('loading');
-            }
+Saya tertarik untuk konsultasi:
+
+📋 *Data Saya:*
+• Nama: ${name}
+• Email: ${email}
+• Telepon: ${phone || '-'}
+• Layanan: ${service || '-'}
+• Budget: ${budget || '-'}
+
+💬 *Pesan:*
+${message}
+
+_Dikirim dari website MAJIHOUSE_`;
+
+            // WhatsApp number
+            const waNumber = '6281254767505';
+            const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
+
+            // Open WhatsApp
+            window.open(waUrl, '_blank');
+
+            // Show success message
+            this.showSuccess();
         });
     }
 

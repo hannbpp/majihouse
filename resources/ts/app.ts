@@ -5,7 +5,7 @@
 
 // Animations
 import { ParticleSystem } from './animations/particles';
-import { TypingEffect } from './animations/typing';
+import { FlipWords } from './components/flip-words';
 import { CounterAnimation } from './animations/counter';
 import { ScrollAnimations } from './animations/scroll';
 
@@ -23,7 +23,7 @@ import 'swiper/css/effect-fade';
 
 class App {
     private particles: ParticleSystem;
-    private typing: TypingEffect;
+    private flipWords: FlipWords;
     private counter: CounterAnimation;
     private scroll: ScrollAnimations;
     private navigation: Navigation;
@@ -34,7 +34,7 @@ class App {
 
     constructor() {
         this.particles = new ParticleSystem();
-        this.typing = new TypingEffect();
+        this.flipWords = new FlipWords();
         this.counter = new CounterAnimation();
         this.scroll = new ScrollAnimations();
         this.navigation = new Navigation();
@@ -62,11 +62,14 @@ class App {
         this.scroll.init();
         this.counter.init();
 
-        // Initialize typing effect with phrases
-        this.typing.init('.hero-typing', [
-            'We design beautiful interfaces.',
-            'We code scalable systems.',
-            'We deliver excellence.',
+        // Initialize FlipWords effect
+        this.flipWords.init('.flip-words-container', [
+            'keren.',
+            'cantik.',
+            'modern.',
+            'menarik.',
+            'skena.',
+            'gen-z abis.',
         ]);
 
         // Initialize components

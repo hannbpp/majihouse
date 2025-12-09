@@ -126,6 +126,7 @@ export class ScrollAnimations {
     private initTimelineGlow(): void {
         const timeline = document.querySelector('.timeline') as HTMLElement;
         const timelineDots = document.querySelectorAll('.timeline-dot');
+        const timelineItems = document.querySelectorAll('.timeline-item');
 
         if (!timeline || timelineDots.length === 0) return;
 
@@ -168,6 +169,26 @@ export class ScrollAnimations {
             }
 
             timeline.style.setProperty('--timeline-progress', `${progress}%`);
+
+            // Auto-hover effect: detect which card is at timeline progress position
+            const viewportCenter = windowHeight * 0.5;
+
+            timelineItems.forEach((item) => {
+                const itemRect = item.getBoundingClientRect();
+                const card = item.querySelector('.service-card') as HTMLElement;
+
+                if (!card) return;
+
+                // Check if the item's dot area is near the center of viewport
+                const itemCenter = itemRect.top + (itemRect.height / 2);
+                const isActive = itemCenter > viewportCenter - 150 && itemCenter < viewportCenter + 150;
+
+                if (isActive) {
+                    card.classList.add('timeline-hover');
+                } else {
+                    card.classList.remove('timeline-hover');
+                }
+            });
         });
     }
 }
