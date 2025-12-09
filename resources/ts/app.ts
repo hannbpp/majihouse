@@ -14,6 +14,7 @@ import { Navigation } from './components/navbar';
 import { Portfolio } from './components/portfolio';
 import { TestimonialsSlider } from './components/testimonials';
 import { ContactForm } from './components/contact';
+import { TechStackMarquee } from './components/techstack';
 
 // Swiper styles
 import 'swiper/css';
@@ -29,6 +30,7 @@ class App {
     private portfolio: Portfolio;
     private testimonials: TestimonialsSlider;
     private contactForm: ContactForm;
+    private techStack: TechStackMarquee;
 
     constructor() {
         this.particles = new ParticleSystem();
@@ -39,6 +41,7 @@ class App {
         this.portfolio = new Portfolio();
         this.testimonials = new TestimonialsSlider();
         this.contactForm = new ContactForm();
+        this.techStack = new TechStackMarquee();
     }
 
     init(): void {
@@ -71,6 +74,7 @@ class App {
         this.portfolio.init();
         this.testimonials.init();
         this.contactForm.init();
+        this.techStack.init();
 
         // Initialize button ripple effects
         this.initRippleEffect();

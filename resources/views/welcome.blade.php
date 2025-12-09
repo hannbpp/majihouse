@@ -39,7 +39,7 @@
             </p>
 
             <div class="hero-cta fade-in">
-                <a href="#contact" class="btn btn-primary">Mulai Konsultasi</a>
+                <a href="#contact" class="btn btn-primary">Mulai Konsultasi Gratis</a>
                 <a href="#portfolio" class="btn btn-outline">Lihat Portfolio</a>
             </div>
         </div>
@@ -80,15 +80,15 @@
                 <div class="about-right fade-in-right">
                     <div class="stats-grid stagger">
                         <div class="stat-item">
-                            <span class="stat-number" data-target="50" data-suffix="+">0</span>
+                            <span class="stat-number" data-target="69" data-suffix="+">0</span>
                             <span class="stat-label">Proyek Selesai</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="30" data-suffix="+">0</span>
+                            <span class="stat-number" data-target="69" data-suffix="+">0</span>
                             <span class="stat-label">Klien Puas</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="4" data-suffix="+">0</span>
+                            <span class="stat-number" data-target="69" data-suffix="+">0</span>
                             <span class="stat-label">Tahun Pengalaman</span>
                         </div>
                         <div class="stat-item">
@@ -564,7 +564,7 @@
                                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
                                         alt="Client" class="testimonial-avatar">
                                     <div class="testimonial-info">
-                                        <div class="testimonial-name">Ahmad Rizki</div>
+                                        <div class="testimonial-name">Dzaky Farhan</div>
                                         <div class="testimonial-role">CEO, TechStartup ID</div>
                                     </div>
                                 </div>
@@ -582,7 +582,7 @@
                                     <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
                                         alt="Client" class="testimonial-avatar">
                                     <div class="testimonial-info">
-                                        <div class="testimonial-name">Sarah Liu</div>
+                                        <div class="testimonial-name">Mia Khalifa</div>
                                         <div class="testimonial-role">Founder, Fashion Brand</div>
                                     </div>
                                 </div>
@@ -600,7 +600,7 @@
                                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
                                         alt="Client" class="testimonial-avatar">
                                     <div class="testimonial-info">
-                                        <div class="testimonial-name">David Chen</div>
+                                        <div class="testimonial-name">Lek Owi</div>
                                         <div class="testimonial-role">CTO, FinanceApp</div>
                                     </div>
                                 </div>
@@ -626,8 +626,8 @@
                     <p class="pricing-description">Cocok untuk landing page dan website sederhana</p>
                     <div class="pricing-box">
                         <span class="pricing-label">Mulai dari</span>
-                        <span class="pricing-original">Rp. 3.500.000</span>
-                        <span class="pricing-price">Rp. 2.500.000</span>
+                        <span class="pricing-original">Rp. 2.000.000</span>
+                        <span class="pricing-price">Rp. 1.000.000</span>
                     </div>
                     <ul class="pricing-features">
                         <li>Landing Page / Website Sederhana</li>
@@ -647,8 +647,8 @@
                     <p class="pricing-description">Cocok untuk proyek skala besar</p>
                     <div class="pricing-box">
                         <span class="pricing-label">Mulai dari</span>
-                        <span class="pricing-original">Rp. 2.000.000</span>
-                        <span class="pricing-price">Rp. 900.000</span>
+                        <span class="pricing-original">Rp. 3.500.000</span>
+                        <span class="pricing-price">Rp. 2.500.000</span>
                     </div>
                     <ul class="pricing-features">
                         <li>Aplikasi Skala Besar</li>
@@ -668,8 +668,8 @@
                     <p class="pricing-description">Cocok untuk aplikasi web lengkap</p>
                     <div class="pricing-box">
                         <span class="pricing-label">Mulai dari</span>
-                        <span class="pricing-original">Rp. 10.000.000</span>
-                        <span class="pricing-price">Rp. 7.500.000</span>
+                        <span class="pricing-original">Rp. 7.500.000</span>
+                        <span class="pricing-price">Rp. 5.000.000</span>
                     </div>
                     <ul class="pricing-features">
                         <li>Aplikasi Web Lengkap</li>
@@ -801,10 +801,10 @@
                                 <label class="form-label" for="budget">Kisaran Budget</label>
                                 <select id="budget" name="budget" class="form-select">
                                     <option value="">Pilih kisaran budget</option>
-                                    <option value="2500-5000">$2,500 - $5,000</option>
-                                    <option value="5000-10000">$5,000 - $10,000</option>
-                                    <option value="10000-25000">$10,000 - $25,000</option>
-                                    <option value="25000+">$25,000+</option>
+                                    <option value="1000000-2500000">Rp. 1.000.000 - Rp. 2.500.000</option>
+                                    <option value="2500000-5000000">Rp. 2.500.000 - Rp. 5.000.000</option>
+                                    <option value="5000000-10000000">Rp. 5.000.000 - Rp. 10.000.000</option>
+                                    <option value="10000000+">Rp. 10.000.000+</option>
                                 </select>
                             </div>
 
