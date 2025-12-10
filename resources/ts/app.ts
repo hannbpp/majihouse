@@ -79,8 +79,66 @@ class App {
         this.contactForm.init();
         this.techStack.init();
 
+        // Initialize service category toggle
+        this.initServiceCategoryToggle();
+
         // Initialize button ripple effects
         this.initRippleEffect();
+    }
+
+    private initServiceCategoryToggle(): void {
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const serviceContainers = document.querySelectorAll('.service-container');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-category');
+
+                // Update active button
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Add pop animation
+                btn.classList.add('pop');
+                setTimeout(() => btn.classList.remove('pop'), 300);
+
+                // Show/hide service containers
+                serviceContainers.forEach(container => {
+                    const containerCategory = container.getAttribute('data-services');
+                    if (containerCategory === category) {
+                        (container as HTMLElement).style.display = 'block';
+
+                        // Re-trigger animations for the visible container
+                        this.triggerContainerAnimations(container as HTMLElement);
+                    } else {
+                        (container as HTMLElement).style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    private triggerContainerAnimations(container: HTMLElement): void {
+        // Re-trigger fade animations
+        const animatedElements = container.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in');
+        animatedElements.forEach((el, index) => {
+            el.classList.remove('visible');
+            setTimeout(() => {
+                el.classList.add('visible');
+            }, index * 100);
+        });
+
+        // Re-trigger timeline dots
+        const timelineDots = container.querySelectorAll('.timeline-dot');
+        timelineDots.forEach((dot, index) => {
+            dot.classList.remove('glow-active');
+            setTimeout(() => {
+                dot.classList.add('glow-active');
+            }, index * 150);
+        });
+
+        // Trigger scroll event to recalculate timeline progress for this container
+        window.dispatchEvent(new Event('scroll'));
     }
 
     private hideLoader(): void {

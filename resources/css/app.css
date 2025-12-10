@@ -221,6 +221,89 @@ p {
   border-radius: var(--radius-full);
 }
 
+/* Service Category Toggle */
+.service-category-toggle {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.category-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.category-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.category-btn:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.4);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  color: #fff;
+  background: var(--gradient-primary);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4), 0 0 30px rgba(236, 72, 153, 0.3);
+  transform: scale(1.05);
+}
+
+.category-btn.active:hover {
+  transform: scale(1.08) translateY(-2px);
+}
+
+/* Pop-up animation for buttons */
+@keyframes categoryBtnPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.category-btn.pop {
+  animation: categoryBtnPop 0.3s ease-out;
+}
+
+/* Service container transitions */
+.service-container {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* --------------------------------------------------------------------------
    Animated Gradient Background
    -------------------------------------------------------------------------- */

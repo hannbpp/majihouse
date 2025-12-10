@@ -269,140 +269,277 @@
         <div class="container">
             <h2 class="section-title fade-in">Layanan Kami</h2>
 
-            <div class="timeline">
-                <!-- Service 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="service-card fade-in-left">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                                <line x1="8" y1="21" x2="16" y2="21" />
-                                <line x1="12" y1="17" x2="12" y2="21" />
-                            </svg>
+            <!-- Category Toggle Buttons -->
+            <div class="service-category-toggle fade-in">
+                <button class="category-btn active" data-category="webdev">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                    Web Dev
+                </button>
+                <button class="category-btn" data-category="socmed">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                    Social Media
+                </button>
+            </div>
+
+            <!-- Web Development Services -->
+            <div class="service-container" data-services="webdev">
+                <div class="timeline">
+                    <!-- Service 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-left">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-description">
+                                Membangun aplikasi web modern, responsif, dan berkinerja tinggi yang memberikan pengalaman
+                                pengguna yang luar biasa.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Frontend</span>
+                                <span class="service-tag">Backend</span>
+                                <span class="service-tag">Full-stack</span>
+                                <span class="service-tag">E-commerce</span>
+                                <span class="service-tag">CMS</span>
+                                <span class="service-tag">PWA</span>
+                            </div>
                         </div>
-                        <h3 class="service-title">Web Development</h3>
-                        <p class="service-description">
-                            Membangun aplikasi web modern, responsif, dan berkinerja tinggi yang memberikan pengalaman
-                            pengguna yang luar biasa.
-                        </p>
-                        <div class="service-tags">
-                            <span class="service-tag">Frontend</span>
-                            <span class="service-tag">Backend</span>
-                            <span class="service-tag">Full-stack</span>
-                            <span class="service-tag">E-commerce</span>
-                            <span class="service-tag">CMS</span>
-                            <span class="service-tag">PWA</span>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-right">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">System Development</h3>
+                            <p class="service-description">
+                                Solusi software kustom dan sistem enterprise yang dirancang untuk menyederhanakan operasi
+                                bisnis Anda.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Custom Apps</span>
+                                <span class="service-tag">SaaS</span>
+                                <span class="service-tag">API</span>
+                                <span class="service-tag">Database</span>
+                                <span class="service-tag">Cloud</span>
+                                <span class="service-tag">Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-left">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10" />
+                                    <line x1="12" y1="20" x2="12" y2="4" />
+                                    <line x1="6" y1="20" x2="6" y2="14" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Data Analytics</h3>
+                            <p class="service-description">
+                                Mengubah data Anda menjadi insight yang actionable dengan solusi analitik dan visualisasi
+                                canggih.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">BI Dashboard</span>
+                                <span class="service-tag">Visualization</span>
+                                <span class="service-tag">ETL</span>
+                                <span class="service-tag">ML</span>
+                                <span class="service-tag">Real-time</span>
+                                <span class="service-tag">Data Warehouse</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-right">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                                    <path d="M2 2l7.586 7.586" />
+                                    <circle cx="11" cy="11" r="2" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">UI/UX Design</h3>
+                            <p class="service-description">
+                                Menciptakan antarmuka yang intuitif dan visual yang memukau yang disukai pengguna.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Interface</span>
+                                <span class="service-tag">Research</span>
+                                <span class="service-tag">Prototyping</span>
+                                <span class="service-tag">Design System</span>
+                                <span class="service-tag">Mobile-First</span>
+                                <span class="service-tag">Accessibility</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-left">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                                    <path
+                                        d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Digital Solutions</h3>
+                            <p class="service-description">
+                                Layanan digital komprehensif untuk maintenance, optimasi, dan scale up kehadiran online
+                                Anda.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Maintenance</span>
+                                <span class="service-tag">Optimization</span>
+                                <span class="service-tag">SEO</span>
+                                <span class="service-tag">Security</span>
+                                <span class="service-tag">DevOps</span>
+                                <span class="service-tag">CI/CD</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Service 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="service-card fade-in-right">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="3" />
-                                <path
-                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                            </svg>
-                        </div>
-                        <h3 class="service-title">System Development</h3>
-                        <p class="service-description">
-                            Solusi software kustom dan sistem enterprise yang dirancang untuk menyederhanakan operasi bisnis
-                            Anda.
-                        </p>
-                        <div class="service-tags">
-                            <span class="service-tag">Custom Apps</span>
-                            <span class="service-tag">SaaS</span>
-                            <span class="service-tag">API</span>
-                            <span class="service-tag">Database</span>
-                            <span class="service-tag">Cloud</span>
-                            <span class="service-tag">Architecture</span>
+            <!-- Social Media Services -->
+            <div class="service-container" data-services="socmed" style="display: none;">
+                <div class="timeline">
+                    <!-- Social Media 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-left">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                                    <circle cx="12" cy="13" r="4" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Content Creation</h3>
+                            <p class="service-description">
+                                Pembuatan konten visual yang menarik dan engaging untuk feed, story, dan reels sosial media
+                                Anda.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Photo</span>
+                                <span class="service-tag">Video</span>
+                                <span class="service-tag">Reels</span>
+                                <span class="service-tag">Story</span>
+                                <span class="service-tag">Carousel</span>
+                                <span class="service-tag">Motion</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Service 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="service-card fade-in-left">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="18" y1="20" x2="18" y2="10" />
-                                <line x1="12" y1="20" x2="12" y2="4" />
-                                <line x1="6" y1="20" x2="6" y2="14" />
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Data Analytics</h3>
-                        <p class="service-description">
-                            Mengubah data Anda menjadi insight yang actionable dengan solusi analitik dan visualisasi
-                            canggih.
-                        </p>
-                        <div class="service-tags">
-                            <span class="service-tag">BI Dashboard</span>
-                            <span class="service-tag">Visualization</span>
-                            <span class="service-tag">ETL</span>
-                            <span class="service-tag">ML</span>
-                            <span class="service-tag">Real-time</span>
-                            <span class="service-tag">Data Warehouse</span>
+                    <!-- Social Media 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-right">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Social Media Strategy</h3>
+                            <p class="service-description">
+                                Strategi growth dan engagement yang terukur untuk meningkatkan brand awareness dan followers
+                                Anda.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Growth</span>
+                                <span class="service-tag">Planning</span>
+                                <span class="service-tag">Calendar</span>
+                                <span class="service-tag">Analytics</span>
+                                <span class="service-tag">Insights</span>
+                                <span class="service-tag">KPI</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Service 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="service-card fade-in-right">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                                <path d="M2 2l7.586 7.586" />
-                                <circle cx="11" cy="11" r="2" />
-                            </svg>
-                        </div>
-                        <h3 class="service-title">UI/UX Design</h3>
-                        <p class="service-description">
-                            Menciptakan antarmuka yang intuitif dan visual yang memukau yang disukai pengguna.
-                        </p>
-                        <div class="service-tags">
-                            <span class="service-tag">Interface</span>
-                            <span class="service-tag">Research</span>
-                            <span class="service-tag">Prototyping</span>
-                            <span class="service-tag">Design System</span>
-                            <span class="service-tag">Mobile-First</span>
-                            <span class="service-tag">Accessibility</span>
+                    <!-- Social Media 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-left">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Community Management</h3>
+                            <p class="service-description">
+                                Kelola komunitas dan interaksi dengan followers untuk membangun hubungan yang kuat dengan
+                                audience.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Engagement</span>
+                                <span class="service-tag">Response</span>
+                                <span class="service-tag">DM</span>
+                                <span class="service-tag">Comments</span>
+                                <span class="service-tag">Moderation</span>
+                                <span class="service-tag">Support</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Service 5 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="service-card fade-in-left">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-                                <path
-                                    d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Digital Solutions</h3>
-                        <p class="service-description">
-                            Layanan digital komprehensif untuk maintenance, optimasi, dan scale up kehadiran online Anda.
-                        </p>
-                        <div class="service-tags">
-                            <span class="service-tag">Maintenance</span>
-                            <span class="service-tag">Optimization</span>
-                            <span class="service-tag">SEO</span>
-                            <span class="service-tag">Security</span>
-                            <span class="service-tag">DevOps</span>
-                            <span class="service-tag">CI/CD</span>
+                    <!-- Social Media 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="service-card fade-in-right">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Paid Advertising</h3>
+                            <p class="service-description">
+                                Iklan berbayar yang efektif di Instagram, Facebook, TikTok untuk menjangkau target audience
+                                yang tepat.
+                            </p>
+                            <div class="service-tags">
+                                <span class="service-tag">Meta Ads</span>
+                                <span class="service-tag">TikTok Ads</span>
+                                <span class="service-tag">Targeting</span>
+                                <span class="service-tag">Retargeting</span>
+                                <span class="service-tag">ROAS</span>
+                                <span class="service-tag">A/B Testing</span>
+                            </div>
                         </div>
                     </div>
                 </div>

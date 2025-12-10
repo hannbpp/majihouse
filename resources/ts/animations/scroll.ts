@@ -149,45 +149,56 @@ export class ScrollAnimations {
             timelineObserver.observe(dot);
         });
 
-        // Scroll progress for timeline line
+        // Scroll progress for timeline line - handle all visible timelines
         window.addEventListener('scroll', () => {
-            const rect = timeline.getBoundingClientRect();
-            const timelineTop = rect.top + window.scrollY;
-            const timelineHeight = timeline.offsetHeight;
-            const scrollTop = window.scrollY;
-            const windowHeight = window.innerHeight;
+            // Get all timelines and process the visible one
+            const allTimelines = document.querySelectorAll('.timeline');
 
-            // Calculate progress based on how much of the timeline is scrolled past
-            const startOffset = timelineTop - windowHeight + 200;
-            const endOffset = timelineTop + timelineHeight - 200;
+            allTimelines.forEach(tl => {
+                const timelineEl = tl as HTMLElement;
+                const container = timelineEl.closest('.service-container') as HTMLElement;
 
-            let progress = 0;
+                // Skip if the container is hidden
+                if (container && container.style.display === 'none') return;
 
-            if (scrollTop > startOffset) {
-                progress = ((scrollTop - startOffset) / (endOffset - startOffset)) * 100;
-                progress = Math.min(100, Math.max(0, progress));
-            }
+                const rect = timelineEl.getBoundingClientRect();
+                const timelineTop = rect.top + window.scrollY;
+                const timelineHeight = timelineEl.offsetHeight;
+                const scrollTop = window.scrollY;
+                const windowHeight = window.innerHeight;
 
-            timeline.style.setProperty('--timeline-progress', `${progress}%`);
+                // Calculate progress based on how much of the timeline is scrolled past
+                const startOffset = timelineTop - windowHeight + 200;
+                const endOffset = timelineTop + timelineHeight - 200;
 
-            // Auto-hover effect: detect which card is at timeline progress position
-            const viewportCenter = windowHeight * 0.5;
+                let progress = 0;
 
-            timelineItems.forEach((item) => {
-                const itemRect = item.getBoundingClientRect();
-                const card = item.querySelector('.service-card') as HTMLElement;
-
-                if (!card) return;
-
-                // Check if the item's dot area is near the center of viewport
-                const itemCenter = itemRect.top + (itemRect.height / 2);
-                const isActive = itemCenter > viewportCenter - 150 && itemCenter < viewportCenter + 150;
-
-                if (isActive) {
-                    card.classList.add('timeline-hover');
-                } else {
-                    card.classList.remove('timeline-hover');
+                if (scrollTop > startOffset) {
+                    progress = ((scrollTop - startOffset) / (endOffset - startOffset)) * 100;
+                    progress = Math.min(100, Math.max(0, progress));
                 }
+
+                timelineEl.style.setProperty('--timeline-progress', `${progress}%`);
+
+                // Auto-hover effect for cards in this timeline
+                const items = timelineEl.querySelectorAll('.timeline-item');
+                const viewportCenter = windowHeight * 0.5;
+
+                items.forEach((item) => {
+                    const itemRect = item.getBoundingClientRect();
+                    const card = item.querySelector('.service-card') as HTMLElement;
+
+                    if (!card) return;
+
+                    const itemCenter = itemRect.top + (itemRect.height / 2);
+                    const isActive = itemCenter > viewportCenter - 150 && itemCenter < viewportCenter + 150;
+
+                    if (isActive) {
+                        card.classList.add('timeline-hover');
+                    } else {
+                        card.classList.remove('timeline-hover');
+                    }
+                });
             });
         });
     }
