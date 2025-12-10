@@ -555,102 +555,163 @@
             <div class="filter-tabs fade-in">
                 <button class="filter-tab active" data-filter="all">Semua</button>
                 <button class="filter-tab" data-filter="web-app">Web App</button>
-                <button class="filter-tab" data-filter="e-commerce">E-commerce</button>
-                <button class="filter-tab" data-filter="saas">SaaS</button>
-                <button class="filter-tab" data-filter="dashboard">Dashboard</button>
                 <button class="filter-tab" data-filter="landing">Landing Page</button>
+                <button class="filter-tab" data-filter="admin-dashboard">Admin Dashboard</button>
+                <button class="filter-tab" data-filter="payment">Payment Gateway</button>
+                <button class="filter-tab" data-filter="booking">Booking System</button>
+                <button class="filter-tab" data-filter="content">Content Creation</button>
+                <button class="filter-tab" data-filter="socmed">Social Media</button>
+                <button class="filter-tab" data-filter="branding">Branding</button>
             </div>
 
-            <div class="portfolio-grid stagger">
-                <!-- Project 1 -->
-                <div class="portfolio-card" data-category="web-app">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop"
-                        alt="Project 1" class="portfolio-image" loading="lazy">
+            <div class="portfolio-grid stagger" id="portfolioGrid">
+                <!-- IT FEST 2025 -->
+                <div class="portfolio-card" data-category="landing">
+                    <img src="/images/portfolio/itfest-2025.png" alt="IT FEST 2025" class="portfolio-image" loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Web App</span>
-                        <h4 class="portfolio-title">E-Learning Platform</h4>
+                        <span class="portfolio-category">Landing Page</span>
+                        <h4 class="portfolio-title">IT FEST 2025</h4>
                         <div class="portfolio-tech">
                             <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                            <span>Vite</span>
+                            <span>Animation</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="portfolio-card" data-category="e-commerce">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop"
-                        alt="Project 2" class="portfolio-image" loading="lazy">
+                <!-- IFL Chapter Malang -->
+                <div class="portfolio-card" data-category="web-app">
+                    <img src="/images/portfolio/ifl-malang.png" alt="IFL Chapter Malang" class="portfolio-image"
+                        loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">E-commerce</span>
-                        <h4 class="portfolio-title">Fashion Marketplace</h4>
-                        <div class="portfolio-tech">
-                            <span>Next.js</span>
-                            <span>Stripe</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="portfolio-card" data-category="saas">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
-                        alt="Project 3" class="portfolio-image" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">SaaS</span>
-                        <h4 class="portfolio-title">Analytics Dashboard</h4>
-                        <div class="portfolio-tech">
-                            <span>Vue.js</span>
-                            <span>Python</span>
-                            <span>AWS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="portfolio-card" data-category="dashboard">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop"
-                        alt="Project 4" class="portfolio-image" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Dashboard</span>
-                        <h4 class="portfolio-title">HR Management System</h4>
+                        <span class="portfolio-category">Web App</span>
+                        <h4 class="portfolio-title">IFL Chapter Malang</h4>
                         <div class="portfolio-tech">
                             <span>Laravel</span>
-                            <span>Alpine.js</span>
+                            <span>MySQL</span>
+                            <span>Livewire</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Akademi Competition -->
+                <div class="portfolio-card" data-category="payment">
+                    <img src="/images/portfolio/akademi-competition.png" alt="Akademi Competition" class="portfolio-image"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Payment Gateway</span>
+                        <h4 class="portfolio-title">Akademi Competition</h4>
+                        <div class="portfolio-tech">
+                            <span>Laravel</span>
+                            <span>Midtrans</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KBMDSI 2025 -->
+                <div class="portfolio-card" data-category="landing">
+                    <img src="/images/portfolio/kbmdsi-2025.png" alt="KBMDSI 2025" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Landing Page</span>
+                        <h4 class="portfolio-title">KBMDSI 2025</h4>
+                        <div class="portfolio-tech">
+                            <span>Laravel</span>
+                            <span>Blade</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Karvin Badminton -->
+                <div class="portfolio-card" data-category="booking">
+                    <img src="/images/portfolio/karvin-badminton.png" alt="Karvin Badminton" class="portfolio-image"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Booking System</span>
+                        <h4 class="portfolio-title">Karvin Badminton</h4>
+                        <div class="portfolio-tech">
+                            <span>Laravel</span>
+                            <span>Booking</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventory System -->
+                <div class="portfolio-card" data-category="admin-dashboard">
+                    <img src="/images/portfolio/inventory-system.png" alt="Inventory System" class="portfolio-image"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Admin Dashboard</span>
+                        <h4 class="portfolio-title">Inventory System</h4>
+                        <div class="portfolio-tech">
+                            <span>Laravel</span>
+                            <span>Livewire</span>
                             <span>MySQL</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="portfolio-card" data-category="landing">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop"
-                        alt="Project 5" class="portfolio-image" loading="lazy">
+                <!-- Page 2 starts here -->
+
+                <!-- Admin Panel -->
+                <div class="portfolio-card" data-category="admin-dashboard">
+                    <img src="/images/portfolio/admin-panel.png" alt="Admin Panel" class="portfolio-image" loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Landing Page</span>
-                        <h4 class="portfolio-title">Fintech Startup</h4>
+                        <span class="portfolio-category">Admin Dashboard</span>
+                        <h4 class="portfolio-title">Karvin Admin Panel</h4>
                         <div class="portfolio-tech">
-                            <span>React</span>
-                            <span>GSAP</span>
-                            <span>Tailwind</span>
+                            <span>Laravel</span>
+                            <span>Filament</span>
+                            <span>Analytics</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="portfolio-card" data-category="web-app">
-                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=500&fit=crop"
-                        alt="Project 6" class="portfolio-image" loading="lazy">
+                <!-- Karvin Payment -->
+                <div class="portfolio-card" data-category="payment">
+                    <img src="/images/portfolio/karvin-payment.png" alt="Karvin Payment" class="portfolio-image"
+                        loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Web App</span>
-                        <h4 class="portfolio-title">Project Management Tool</h4>
+                        <span class="portfolio-category">Payment Gateway</span>
+                        <h4 class="portfolio-title">Karvin Payment</h4>
                         <div class="portfolio-tech">
-                            <span>Next.js</span>
-                            <span>Prisma</span>
-                            <span>Vercel</span>
+                            <span>Midtrans</span>
+                            <span>Laravel</span>
+                            <span>Booking</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Marirasa Bakpao -->
+                <div class="portfolio-card" data-category="landing">
+                    <img src="/images/portfolio/marirasa.png" alt="Marirasa Bakpao" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Landing Page</span>
+                        <h4 class="portfolio-title">Marirasa Bakpao</h4>
+                        <div class="portfolio-tech">
+                            <span>HTML/CSS</span>
+                            <span>WhatsApp API</span>
+                            <span>SEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Pagination -->
+            <div class="portfolio-pagination fade-in">
+                <button class="pagination-btn" id="prevPage" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+                <span class="pagination-info"><span id="currentPage">1</span> / <span id="totalPages">2</span></span>
+                <button class="pagination-btn" id="nextPage">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>

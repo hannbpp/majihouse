@@ -1269,6 +1269,9 @@ p {
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-2xl);
   flex-wrap: wrap;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .filter-tab {
@@ -1280,6 +1283,7 @@ p {
   font-size: var(--text-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .filter-tab:hover,
@@ -1287,6 +1291,19 @@ p {
   background: var(--gradient-primary);
   border-color: transparent;
   color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .filter-tabs {
+    max-width: 100%;
+    gap: 0.4rem;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .filter-tab {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
 }
 
 .portfolio-grid {
@@ -1305,6 +1322,52 @@ p {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Portfolio Pagination */
+.portfolio-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+}
+
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  min-width: 60px;
+  text-align: center;
+}
+
+.portfolio-card.page-hidden {
+  display: none;
 }
 
 .portfolio-card {

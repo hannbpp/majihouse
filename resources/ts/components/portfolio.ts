@@ -1,12 +1,15 @@
 /**
  * Portfolio Component
- * Handles filter tabs and modal functionality
+ * Handles filter tabs, modal functionality, and pagination
  */
 
 export class Portfolio {
     private filterTabs: NodeListOf<Element> | null = null;
     private portfolioCards: NodeListOf<Element> | null = null;
     private modalOverlay: HTMLElement | null = null;
+    private currentPage: number = 1;
+    private itemsPerPage: number = 6;
+    private currentFilter: string = 'all';
 
     init(): void {
         this.filterTabs = document.querySelectorAll('.filter-tab');
@@ -16,6 +19,76 @@ export class Portfolio {
         this.initFilters();
         this.initModal();
         this.initTiltEffect();
+        this.initPagination();
+        this.updatePagination();
+    }
+
+    private getFilteredCards(): Element[] {
+        if (!this.portfolioCards) return [];
+        return Array.from(this.portfolioCards).filter(card => {
+            const category = card.getAttribute('data-category') || '';
+            return this.currentFilter === 'all' || category === this.currentFilter;
+        });
+    }
+
+    private updatePagination(): void {
+        const filteredCards = this.getFilteredCards();
+        const totalPages = Math.ceil(filteredCards.length / this.itemsPerPage);
+
+        // Update page display
+        const currentPageEl = document.getElementById('currentPage');
+        const totalPagesEl = document.getElementById('totalPages');
+        const prevBtn = document.getElementById('prevPage') as HTMLButtonElement;
+        const nextBtn = document.getElementById('nextPage') as HTMLButtonElement;
+
+        if (currentPageEl) currentPageEl.textContent = String(this.currentPage);
+        if (totalPagesEl) totalPagesEl.textContent = String(totalPages || 1);
+        if (prevBtn) prevBtn.disabled = this.currentPage <= 1;
+        if (nextBtn) nextBtn.disabled = this.currentPage >= totalPages;
+
+        // Show/hide cards based on current page
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+
+        this.portfolioCards?.forEach((card, _index) => {
+            const cardElement = card as HTMLElement;
+            const category = cardElement.getAttribute('data-category') || '';
+            const matchesFilter = this.currentFilter === 'all' || category === this.currentFilter;
+
+            if (!matchesFilter) {
+                cardElement.classList.add('page-hidden');
+                return;
+            }
+
+            const filteredIndex = filteredCards.indexOf(card);
+            if (filteredIndex >= startIndex && filteredIndex < endIndex) {
+                cardElement.classList.remove('page-hidden');
+                cardElement.style.animation = `fadeIn 0.4s ease ${(filteredIndex - startIndex) * 0.1}s forwards`;
+            } else {
+                cardElement.classList.add('page-hidden');
+            }
+        });
+    }
+
+    private initPagination(): void {
+        const prevBtn = document.getElementById('prevPage');
+        const nextBtn = document.getElementById('nextPage');
+
+        prevBtn?.addEventListener('click', () => {
+            if (this.currentPage > 1) {
+                this.currentPage--;
+                this.updatePagination();
+            }
+        });
+
+        nextBtn?.addEventListener('click', () => {
+            const filteredCards = this.getFilteredCards();
+            const totalPages = Math.ceil(filteredCards.length / this.itemsPerPage);
+            if (this.currentPage < totalPages) {
+                this.currentPage++;
+                this.updatePagination();
+            }
+        });
     }
 
     private initFilters(): void {
@@ -27,20 +100,9 @@ export class Portfolio {
                 this.filterTabs?.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
 
-                const filter = tab.getAttribute('data-filter') || 'all';
-
-                // Filter cards with animation
-                this.portfolioCards?.forEach((card, index) => {
-                    const cardElement = card as HTMLElement;
-                    const category = cardElement.getAttribute('data-category') || '';
-
-                    if (filter === 'all' || category === filter) {
-                        cardElement.style.display = 'block';
-                        cardElement.style.animation = `fadeIn 0.5s ease ${index * 0.1}s forwards`;
-                    } else {
-                        cardElement.style.display = 'none';
-                    }
-                });
+                this.currentFilter = tab.getAttribute('data-filter') || 'all';
+                this.currentPage = 1; // Reset to first page on filter change
+                this.updatePagination();
             });
         });
     }
