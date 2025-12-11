@@ -808,7 +808,7 @@
                                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
                                         alt="Client" class="testimonial-avatar">
                                     <div class="testimonial-info">
-                                        <div class="testimonial-name">Dzaky Farhan</div>
+                                        <div class="testimonial-name">Dimas Pratama</div>
                                         <div class="testimonial-role">CEO, TechStartup ID</div>
                                     </div>
                                 </div>
@@ -826,7 +826,7 @@
                                     <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
                                         alt="Client" class="testimonial-avatar">
                                     <div class="testimonial-info">
-                                        <div class="testimonial-name">Mia Khalifa</div>
+                                        <div class="testimonial-name">Lia Amalia</div>
                                         <div class="testimonial-role">Founder, Fashion Brand</div>
                                     </div>
                                 </div>
@@ -844,7 +844,7 @@
                                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
                                         alt="Client" class="testimonial-avatar">
                                     <div class="testimonial-info">
-                                        <div class="testimonial-name">Lek Owi</div>
+                                        <div class="testimonial-name">Sugondo Limin</div>
                                         <div class="testimonial-role">CTO, FinanceApp</div>
                                     </div>
                                 </div>
