@@ -15,7 +15,7 @@
             <li><a href="#contact" class="nav-link">Kontak</a></li>
         </ul>
 
-        <a href="https://wa.me/6281254767505" target="_blank" class="nav-cta">Kick Off</a>
+        <a href="https://wa.me/628987749739" target="_blank" class="nav-cta">Kick Off</a>
 
         <button class="nav-toggle" aria-label="Toggle menu">
             <span></span>
@@ -963,7 +963,7 @@
                         </div>
                         <div>
                             <div class="contact-label">WhatsApp</div>
-                            <div class="contact-value">+62 812-5476-7505</div>
+                            <div class="contact-value">+62 898-7749-739</div>
                         </div>
                     </div>
 

@@ -118,7 +118,7 @@ ${message}
 _Dikirim dari website MAJIHOUSE_`;
 
             // WhatsApp number
-            const waNumber = '6281254767505';
+            const waNumber = '628987749739';
             const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
 
             // Open WhatsApp

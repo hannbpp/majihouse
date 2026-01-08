@@ -60,7 +60,7 @@
     @yield('content')
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/6281254767505?text=Halo%20MAJIHOUSE!%0ASaya%20tertarik%20untuk%20konsultasi%20mengenai%20layanan%20yang%20tersedia.%0A%0AMohon%20informasinya%20ya!"
+    <a href="https://wa.me/628987749739?text=Halo%20MAJIHOUSE!%0ASaya%20tertarik%20untuk%20konsultasi%20mengenai%20layanan%20yang%20tersedia.%0A%0AMohon%20informasinya%20ya!"
         target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
