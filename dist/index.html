@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -26,1167 +26,761 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Inter (like FtrTech) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Vite Assets -->
-    <link rel="stylesheet" href="/build/assets/app-Cvr-PdhS.css">
-    <link rel="stylesheet" href="/build/assets/app-BTILATDm.css">
-    <script type="module" src="/build/assets/app-VeTAZN2S.js"></script>
-</head>
+    <link rel="preload" as="style" href="/build/assets/app-sMA1pulT.css" /><link rel="modulepreload" as="script" href="/build/assets/app-CAayUYk9.js" /><link rel="stylesheet" href="/build/assets/app-sMA1pulT.css" /><script type="module" src="/build/assets/app-CAayUYk9.js"></script></head>
 
 <body>
     <!-- Page Loader -->
     <div class="page-loader">
         <div class="loader-logo">
-            <img src="/images/majihouse-logo.png" alt="MAJIHOUSE" class="loader-logo-img">
+            <span class="loader-logo-text">majihouse</span>
         </div>
         <div class="loader-bar">
             <div class="loader-bar-inner"></div>
         </div>
     </div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
+    <!-- Grid Pattern Background -->
+    <div class="grid-bg"></div>
 
-    <!-- Particles Container -->
-    <div id="particles-container"></div>
-
-    <!-- Animated Gradient Background -->
-    <div class="gradient-bg"></div>
-
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav class="navbar">
-        <a href="#" class="nav-logo">
-            <img src="/images/majihouse-logo.png" alt="MAJIHOUSE" class="nav-logo-img">
-        </a>
-
+        <a href="#" class="nav-logo">majihouse</a>
         <ul class="nav-links">
-            <li><a href="#about" class="nav-link">Tentang</a></li>
-            <li><a href="#services" class="nav-link">Layanan</a></li>
-            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li><a href="#pricing" class="nav-link">Harga</a></li>
-            <li><a href="#contact" class="nav-link">Kontak</a></li>
+            <li><a href="#about" class="nav-link" data-i18n="nav.about">Tentang</a></li>
+            <li><a href="#services" class="nav-link" data-i18n="nav.services">Layanan</a></li>
+            <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="#pricing" class="nav-link" data-i18n="nav.pricing">Harga</a></li>
+            <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Kontak</a></li>
         </ul>
-
-        <a href="https://wa.me/628987749739" target="_blank" class="nav-cta">Kick Off</a>
-
-        <button class="nav-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+            <button class="lang-toggle" id="langToggle" aria-label="Toggle language">ID</button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i data-lucide="sun" class="icon-sun"></i>
+                <i data-lucide="moon" class="icon-moon"></i>
+            </button>
+            <a href="https://wa.me/628987749739" target="_blank" class="nav-cta">Kick Off <i
+                    data-lucide="arrow-right"></i></a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </nav>
 
-    <!-- Hero Section -->
+    <div class="scroll-progress"></div>
+
+    <!-- HERO -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <h1 class="hero-title fade-in">
-                Bangun website & sosial media<br>
-                <span class="hero-line2">yang <span class="flip-words-container"></span></span>
-            </h1>
-
-            <p class="hero-description fade-in">
-                MAJIHOUSE membantu membangun website profesional sekaligus mengelola social media untuk memperkuat
-                kehadiran
-                digital brand Anda.
+            <div class="hero-announcement"><i data-lucide="zap"></i> <span data-i18n="hero.announcement">Dunia udah ribet,
+                    brand kamu jangan.</span></div>
+            <h1 class="hero-title" data-i18n="hero.title">Ubah Mumet Jadi Aset,<br>Dengan Sat-Set.</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Ngapain pusing sendirian? Biar kita yang urus website &
+                socmed dari nol sampai
+                <strong><em>jadi cuan!</em></strong>
             </p>
-
-            <div class="hero-cta fade-in">
-                <a href="#contact" class="btn btn-primary">Mulai Konsultasi Gratis</a>
-                <a href="#portfolio" class="btn btn-outline">Lihat Portfolio</a>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary"><span data-i18n="hero.ctaPrimary">Mulai Konsultasi Gratis</span>
+                    <i data-lucide="arrow-right"></i></a>
+                <a href="#portfolio" class="btn btn-outline" data-i18n="hero.ctaSecondary">Lihat Portfolio</a>
+            </div>
+            <div class="hero-social-proof">
+                <div class="avatar-stack">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop" alt="Client">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop" alt="Client">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop" alt="Client">
+                    <span class="avatar-count">15+</span>
+                </div>
+                <div class="hero-stars">★★★★★</div>
+                <span class="hero-proof-text" data-i18n="hero.proof">15+ Klien Puas • 4.9 Rating</span>
             </div>
         </div>
-
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M19 12l-7 7-7-7" />
-            </svg>
-        </div>
-
-        <!-- Floating Icons -->
-        <div class="hero-floating-icons">
-            <!-- Code Icon -->
-            <div class="floating-icon" style="top: 10%; left: 6%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-                </svg>
+        <div class="floating-testimonials">
+            <div class="floating-card" style="top:30%;left:13%;">
+                <div class="floating-card-header">
+                    <i data-lucide="quote" class="floating-card-quote"></i>
+                    <i data-lucide="circle-check-big" class="floating-card-check"></i>
+                </div>
+                <div class="floating-card-text" data-i18n="testi.1.text">Website selesai tepat waktu dengan kualitas luar
+                    biasa!</div>
+                <div class="floating-card-author">— Dimas P.</div>
             </div>
-            <!-- Instagram Icon -->
-            <div class="floating-icon" style="top: 15%; right: 10%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="2" y="2" width="20" height="20" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="18" cy="6" r="1.5" fill="currentColor" />
-                </svg>
+            <div class="floating-card" style="top:33%;right:13%;">
+                <div class="floating-card-header">
+                    <i data-lucide="quote" class="floating-card-quote"></i>
+                    <i data-lucide="circle-check-big" class="floating-card-check"></i>
+                </div>
+                <div class="floating-card-text" data-i18n="testi.2.text">Penjualan naik 150% setelah platform baru.</div>
+                <div class="floating-card-author">— Lia A.</div>
             </div>
-            <!-- TikTok Icon -->
-            <div class="floating-icon" style="bottom: 18%; left: 10%;">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
-                </svg>
-            </div>
-            <!-- Chart/Stats Icon -->
-            <div class="floating-icon" style="bottom: 15%; right: 6%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M3 3v18h18" />
-                    <path d="M7 16l4-4 4 4 6-6" />
-                </svg>
-            </div>
-            <!-- Cursor/Design Icon -->
-            <div class="floating-icon" style="top: 50%; left: 3%;">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M4 4l7.07 17 2.51-7.39L21 11.1 4 4z" />
-                </svg>
-            </div>
-            <!-- Globe Icon -->
-            <div class="floating-icon" style="top: 40%; right: 5%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path
-                        d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-                </svg>
+            <div class="floating-card" style="top:60%;left:16%;">
+                <div class="floating-card-header">
+                    <i data-lucide="quote" class="floating-card-quote"></i>
+                    <i data-lucide="circle-check-big" class="floating-card-check"></i>
+                </div>
+                <div class="floating-card-text" data-i18n="testi.3.text">Profesionalisme tim sangat luar biasa.</div>
+                <div class="floating-card-author">— Sugondo L.</div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT -->
     <section class="section about" id="about">
         <div class="container">
-            <h2 class="section-title fade-in">Tentang MAJIHOUSE</h2>
-
+            <div class="section-header fade-in">
+                <div class="section-label"><i data-lucide="shield"></i> <span data-i18n="about.badge">TENTANG KAMI</span>
+                </div>
+                <h2 class="section-title" data-i18n="about.title">Where Creativity<br><span
+                        class="section-title-muted">Meets Code</span></h2>
+            </div>
             <div class="about-grid">
                 <div class="about-story fade-in-left">
-                    <h3>Where Creativity Meets Code</h3>
-                    <p>
-                        MAJIHOUSE adalah studio digital yang menjembatani kesenjangan antara desain yang memukau dan
-                        teknologi yang handal.
-                        Didirikan dengan passion untuk menciptakan pengalaman digital yang luar biasa, kami
-                        mengkhususkan
-                        diri dalam
-                        membangun aplikasi web, sistem, dan antarmuka yang tidak hanya terlihat indah tetapi juga
-                        berkinerja
-                        sempurna.
-                    </p>
-                    <p>
-                        Pendekatan kami menggabungkan keahlian teknis yang mendalam dengan pemikiran kreatif. Kami tidak
-                        hanya membangun
-                        produk—kami membangun solusi yang mendorong hasil bisnis nyata. Dari startup hingga enterprise,
-                        kami bermitra dengan brand ambisius untuk mengubah tantangan kompleks menjadi solusi digital
-                        yang
-                        elegan.
-                    </p>
+                    <h3 data-i18n="about.story.title">Studio Digital Modern</h3>
+                    <p data-i18n="about.desc1">MAJIHOUSE adalah studio digital yang menjembatani kesenjangan antara desain
+                        yang memukau dan
+                        teknologi yang handal. Kami mengkhususkan diri dalam membangun aplikasi web, sistem, dan antarmuka
+                        yang berkinerja sempurna.</p>
+                    <p data-i18n="about.desc2">Pendekatan kami menggabungkan keahlian teknis dengan pemikiran kreatif. Dari
+                        startup hingga
+                        enterprise, kami bermitra dengan brand ambisius untuk mengubah tantangan kompleks menjadi solusi
+                        digital yang elegan.</p>
                 </div>
-
                 <div class="about-right fade-in-right">
-                    <div class="stats-grid stagger">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="15" data-suffix="+">0</span>
-                            <span class="stat-label">Proyek Selesai</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="10" data-suffix="+">0</span>
-                            <span class="stat-label">Klien Puas</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="3" data-suffix="+">0</span>
-                            <span class="stat-label">Tahun Pengalaman</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="99" data-suffix="%">0</span>
-                            <span class="stat-label">Kepuasan Klien</span>
-                        </div>
+                    <div class="stats-grid">
+                        <div class="stat-item"><span class="stat-number" data-target="15" data-suffix="+">0</span><span
+                                class="stat-label" data-i18n="about.stat1">Proyek Selesai</span></div>
+                        <div class="stat-item"><span class="stat-number" data-target="10" data-suffix="+">0</span><span
+                                class="stat-label" data-i18n="about.stat2">Klien Puas</span></div>
+                        <div class="stat-item"><span class="stat-number" data-target="3" data-suffix="+">0</span><span
+                                class="stat-label" data-i18n="about.stat3">Tahun Pengalaman</span></div>
+                        <div class="stat-item"><span class="stat-number" data-target="99" data-suffix="%">0</span><span
+                                class="stat-label" data-i18n="about.stat4">Kepuasan Klien</span></div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Tech Stack Marquee -->
         <div class="tech-stack">
             <div class="tech-marquee">
-                <!-- Development Tools -->
-                <!-- React -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24" fill="#61DAFB">
-                        <path
-                            d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" />
-                    </svg>
-                    React
-                </div>
-                <!-- Next.js -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24" fill="#ffffff">
-                        <path
-                            d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.572 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z" />
-                    </svg>
-                    Next.js
-                </div>
-                <!-- Vue.js -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24" fill="#4FC08D">
-                        <path
-                            d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78zM12 14.08 5.16 2.23h4.43L12 6.41l2.41-4.18h4.43z" />
-                    </svg>
-                    Vue.js
-                </div>
-                <!-- Node.js -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24" fill="#339933">
-                        <path
-                            d="M11.998 24c-.321 0-.641-.084-.922-.247L8.14 21.988c-.438-.245-.224-.332-.08-.383.583-.203.7-.249 1.322-.603.065-.037.151-.023.218.017l2.256 1.339c.082.045.198.045.275 0l8.795-5.076c.082-.047.134-.141.134-.238V6.921c0-.099-.053-.193-.137-.242l-8.791-5.072c-.081-.047-.189-.047-.271 0L3.075 6.68c-.084.048-.138.147-.138.242v10.124c0 .096.054.189.137.236l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v9.997c0 1.745-.951 2.745-2.604 2.745-.509 0-.909 0-2.026-.551L2.28 18.675c-.57-.329-.922-.943-.922-1.604V6.921c0-.66.351-1.273.922-1.602l8.795-5.082c.557-.315 1.296-.315 1.848 0l8.794 5.082c.57.329.924.943.924 1.602v10.15c0 .66-.354 1.273-.924 1.604l-8.794 5.078c-.28.163-.6.247-.925.247z" />
-                    </svg>
-                    Node.js
-                </div>
-                <!-- Laravel -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24" fill="#FF2D20">
-                        <path
-                            d="M23.642 5.43a.364.364 0 0 1 .014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934c0 .135-.073.26-.189.326l-9.006 5.19a.32.32 0 0 1-.066.028c-.009.003-.018.008-.028.01a.353.353 0 0 1-.181 0c-.011-.003-.021-.008-.031-.011a.302.302 0 0 1-.065-.028L.333 18.755a.376.376 0 0 1-.19-.326V5.53c0-.035.005-.07.014-.1.003-.011.009-.022.013-.033.011-.025.025-.048.042-.07.008-.011.019-.021.029-.031.014-.014.029-.026.046-.037.014-.009.028-.019.044-.025l4.511-2.6a.377.377 0 0 1 .379 0l4.512 2.6.044.025c.017.011.032.023.046.037.01.01.021.02.029.031.017.022.031.045.042.07.004.011.01.022.013.033.01.031.014.065.014.1v9.652l3.755-2.165V7.965c0-.035.005-.07.014-.1.003-.011.009-.022.013-.033.011-.025.025-.048.042-.07.008-.011.019-.021.029-.031.014-.014.029-.026.046-.037.014-.009.028-.019.044-.025l4.512-2.6a.377.377 0 0 1 .378 0l4.512 2.6z" />
-                    </svg>
-                    Laravel
-                </div>
-                <!-- PostgreSQL -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24" fill="#4169E1">
-                        <path
-                            d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3418-2.2319.2-2.3987.1191-.6741-2.2-1.0396-4.0878-1.0558-5.9434 0-1.6612 3.6478-2.0235 3.5676-3.9715C22.5313 3.5148 20.8303.4293 16.5944.0547 13.4582-.2294 10.8421.4453 8.5867 1.7443c-.9912-.399-2.2842-.5191-3.9513-.3197C2.047 1.7125.5259 3.1155.083 4.8717c-.3777 1.4969-.0859 3.1173.8193 4.5512-.5295.8354-.8114 1.8253-.8392 2.9467-.0597 2.4218.6162 4.9058 1.8335 6.669 1.1456 1.653 2.6736 2.4757 4.4004 2.3884z" />
-                    </svg>
-                    PostgreSQL
-                </div>
-                <!-- Design Tools -->
-                <!-- Figma -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24" fill="#F24E1E">
-                        <path
-                            d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm-4.587 16.49c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v4.49c0 2.476-2.014 4.49-4.588 4.49zm0-7.51c-1.665 0-3.019 1.355-3.019 3.02s1.355 3.019 3.019 3.019 3.019-1.355 3.019-3.019v-3.02H8.148zM8.148 8.981c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981H8.148zm0-7.51c-1.665 0-3.019 1.355-3.019 3.02s1.355 3.019 3.019 3.019h3.117V1.471H8.148zM8.148 15.02c2.476 0 4.49-2.014 4.49-4.49s-2.014-4.49-4.49-4.49-4.49 2.014-4.49 4.49 2.014 4.49 4.49 4.49zm0-7.51c1.665 0 3.019 1.355 3.019 3.02s-1.355 3.019-3.019 3.019-3.019-1.355-3.019-3.019 1.354-3.02 3.019-3.02zM15.852 15.02h-4.588V6.04h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-3.117-1.47h3.117c1.665 0 3.019-1.355 3.019-3.02s-1.355-3.019-3.019-3.019h-3.117v6.039z" />
-                    </svg>
-                    Figma
-                </div>
-                <!-- Photoshop -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="1" y="1" width="22" height="22" rx="4" fill="#31A8FF" />
-                        <text x="12" y="16.5" text-anchor="middle" fill="#001E36" font-size="9" font-weight="600"
-                            font-family="Arial, sans-serif">Ps</text>
-                    </svg>
-                    Photoshop
-                </div>
-                <!-- Illustrator -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="1" y="1" width="22" height="22" rx="4" fill="#FF9A00" />
-                        <text x="12" y="16.5" text-anchor="middle" fill="#330000" font-size="9" font-weight="600"
-                            font-family="Arial, sans-serif">Ai</text>
-                    </svg>
-                    Illustrator
-                </div>
-                <!-- Premiere Pro -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="1" y="1" width="22" height="22" rx="4" fill="#9999FF" />
-                        <text x="12" y="16.5" text-anchor="middle" fill="#00005B" font-size="9" font-weight="600"
-                            font-family="Arial, sans-serif">Pr</text>
-                    </svg>
-                    Premiere Pro
-                </div>
-                <!-- After Effects -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="1" y="1" width="22" height="22" rx="4" fill="#9999FF" />
-                        <text x="12" y="16.5" text-anchor="middle" fill="#00005B" font-size="9" font-weight="600"
-                            font-family="Arial, sans-serif">Ae</text>
-                    </svg>
-                    After Effects
-                </div>
-                <!-- CapCut -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="11" fill="#000000" />
-                        <text x="12" y="16" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="600"
-                            font-family="Arial, sans-serif">CC</text>
-                    </svg>
-                    CapCut
-                </div>
-                <!-- Canva -->
-                <div class="tech-item">
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="11" fill="#00C4CC" />
-                        <text x="12" y="16" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="600"
-                            font-family="Arial, sans-serif">C</text>
-                    </svg>
-                    Canva
-                </div>
+                <div class="tech-item"><i data-lucide="code-xml"></i> React / Next.js</div>
+                <div class="tech-item"><i data-lucide="layers"></i> TypeScript</div>
+                <div class="tech-item"><i data-lucide="code"></i> Vue.js</div>
+                <div class="tech-item"><i data-lucide="server"></i> Node.js</div>
+                <div class="tech-item"><i data-lucide="cpu"></i> Laravel</div>
+                <div class="tech-item"><i data-lucide="database"></i> PostgreSQL</div>
+                <div class="tech-item"><i data-lucide="figma"></i> Figma</div>
+                <div class="tech-item"><i data-lucide="image"></i> Photoshop</div>
+                <div class="tech-item"><i data-lucide="pen-tool"></i> Illustrator</div>
+                <div class="tech-item"><i data-lucide="paintbrush"></i> Canva</div>
+                
+                <div class="tech-item"><i data-lucide="code-xml"></i> React / Next.js</div>
+                <div class="tech-item"><i data-lucide="layers"></i> TypeScript</div>
+                <div class="tech-item"><i data-lucide="code"></i> Vue.js</div>
+                <div class="tech-item"><i data-lucide="server"></i> Node.js</div>
+                <div class="tech-item"><i data-lucide="cpu"></i> Laravel</div>
+                <div class="tech-item"><i data-lucide="database"></i> PostgreSQL</div>
+                <div class="tech-item"><i data-lucide="figma"></i> Figma</div>
+                <div class="tech-item"><i data-lucide="image"></i> Photoshop</div>
+                <div class="tech-item"><i data-lucide="pen-tool"></i> Illustrator</div>
+                <div class="tech-item"><i data-lucide="paintbrush"></i> Canva</div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- SERVICES (Bento Grid) -->
     <section class="section services" id="services">
         <div class="container">
-            <h2 class="section-title fade-in">Layanan Kami</h2>
-
-            <!-- Category Toggle Buttons -->
-            <div class="service-category-toggle fade-in">
-                <button class="category-btn active" data-category="webdev">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                        <polyline points="16 18 22 12 16 6" />
-                        <polyline points="8 6 2 12 8 18" />
-                    </svg>
-                    Web Dev
-                </button>
-                <button class="category-btn" data-category="socmed">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                    </svg>
-                    Social Media
-                </button>
+            <div class="section-header fade-in">
+                <div class="section-label"><i data-lucide="layers"></i> <span data-i18n="services.badge">LAYANAN
+                        KAMI</span></div>
+                <h2 class="section-title" data-i18n="services.title">Solusi Digital<br><span
+                        class="section-title-muted">Untuk Bisnis Anda</span></h2>
             </div>
-
-            <!-- Web Development Services -->
+            <div class="service-category-toggle fade-in">
+                <button class="category-btn active" data-category="webdev"><i data-lucide="code"></i> Web Dev</button>
+                <button class="category-btn" data-category="socmed"><i data-lucide="share-2"></i> Social Media</button>
+            </div>
             <div class="service-container" data-services="webdev">
-                <div class="timeline">
-                    <!-- Service 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-left">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                                    <line x1="8" y1="21" x2="16" y2="21" />
-                                    <line x1="12" y1="17" x2="12" y2="21" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Web Development</h3>
-                            <p class="service-description">
-                                Membangun aplikasi web modern, responsif, dan berkinerja tinggi yang memberikan
-                                pengalaman
-                                pengguna yang luar biasa.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Frontend</span>
-                                <span class="service-tag">Backend</span>
-                                <span class="service-tag">Full-stack</span>
-                                <span class="service-tag">E-commerce</span>
-                                <span class="service-tag">CMS</span>
-                                <span class="service-tag">PWA</span>
-                            </div>
-                        </div>
+                <div class="bento-grid">
+                    <div class="bento-card fade-in-left">
+                        <h3 class="bento-card-title" data-i18n="services.web1.title">Web Development</h3>
+                        <p class="bento-card-desc" data-i18n="services.web1.desc">Membangun aplikasi web modern, responsif,
+                            dan berkinerja tinggi.</p>
+                        <div class="bento-tags"><span class="bento-tag">Frontend</span><span
+                                class="bento-tag">Backend</span><span class="bento-tag">Full-stack</span><span
+                                class="bento-tag">E-commerce</span><span class="bento-tag">CMS</span><span
+                                class="bento-tag">PWA</span></div>
                     </div>
-
-                    <!-- Service 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-right">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3" />
-                                    <path
-                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">System Development</h3>
-                            <p class="service-description">
-                                Solusi software kustom dan sistem enterprise yang dirancang untuk menyederhanakan
-                                operasi
-                                bisnis Anda.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Custom Apps</span>
-                                <span class="service-tag">SaaS</span>
-                                <span class="service-tag">API</span>
-                                <span class="service-tag">Database</span>
-                                <span class="service-tag">Cloud</span>
-                                <span class="service-tag">Architecture</span>
-                            </div>
-                        </div>
+                    <div class="bento-card fade-in-right">
+                        <h3 class="bento-card-title" data-i18n="services.web2.title">System Development</h3>
+                        <p class="bento-card-desc" data-i18n="services.web2.desc">Solusi software kustom dan sistem
+                            enterprise untuk bisnis Anda.</p>
+                        <div class="bento-tags"><span class="bento-tag">Custom Apps</span><span
+                                class="bento-tag">SaaS</span><span class="bento-tag">API</span><span
+                                class="bento-tag">Database</span><span class="bento-tag">Cloud</span></div>
                     </div>
-
-                    <!-- Service 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-left">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="18" y1="20" x2="18" y2="10" />
-                                    <line x1="12" y1="20" x2="12" y2="4" />
-                                    <line x1="6" y1="20" x2="6" y2="14" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Data Analytics</h3>
-                            <p class="service-description">
-                                Mengubah data Anda menjadi insight yang actionable dengan solusi analitik dan
-                                visualisasi
-                                canggih.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">BI Dashboard</span>
-                                <span class="service-tag">Visualization</span>
-                                <span class="service-tag">ETL</span>
-                                <span class="service-tag">ML</span>
-                                <span class="service-tag">Real-time</span>
-                                <span class="service-tag">Data Warehouse</span>
-                            </div>
-                        </div>
+                    <div class="bento-card fade-in-left">
+                        <h3 class="bento-card-title" data-i18n="services.web3.title">Data Analytics</h3>
+                        <p class="bento-card-desc" data-i18n="services.web3.desc">Mengubah data menjadi insight actionable
+                            dengan solusi analitik canggih.
+                        </p>
+                        <div class="bento-tags"><span class="bento-tag">BI Dashboard</span><span
+                                class="bento-tag">Visualization</span><span class="bento-tag">ETL</span><span
+                                class="bento-tag">ML</span><span class="bento-tag">Real-time</span></div>
                     </div>
-
-                    <!-- Service 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-right">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                                    <path d="M2 2l7.586 7.586" />
-                                    <circle cx="11" cy="11" r="2" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">UI/UX Design</h3>
-                            <p class="service-description">
-                                Menciptakan antarmuka yang intuitif dan visual yang memukau yang disukai pengguna.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Interface</span>
-                                <span class="service-tag">Research</span>
-                                <span class="service-tag">Prototyping</span>
-                                <span class="service-tag">Design System</span>
-                                <span class="service-tag">Mobile-First</span>
-                                <span class="service-tag">Accessibility</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service 5 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-left">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-                                    <path
-                                        d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Digital Solutions</h3>
-                            <p class="service-description">
-                                Layanan digital komprehensif untuk maintenance, optimasi, dan scale up kehadiran online
-                                Anda.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Maintenance</span>
-                                <span class="service-tag">Optimization</span>
-                                <span class="service-tag">SEO</span>
-                                <span class="service-tag">Security</span>
-                                <span class="service-tag">DevOps</span>
-                                <span class="service-tag">CI/CD</span>
-                            </div>
-                        </div>
+                    <div class="bento-card fade-in-right">
+                        <h3 class="bento-card-title" data-i18n="services.web4.title">UI/UX Design</h3>
+                        <p class="bento-card-desc" data-i18n="services.web4.desc">Antarmuka intuitif dan visual memukau yang
+                            disukai pengguna.</p>
+                        <div class="bento-tags"><span class="bento-tag">Interface</span><span
+                                class="bento-tag">Prototyping</span><span class="bento-tag">Design System</span><span
+                                class="bento-tag">Mobile-First</span></div>
                     </div>
                 </div>
             </div>
-
-            <!-- Social Media Services -->
-            <div class="service-container" data-services="socmed" style="display: none;">
-                <div class="timeline">
-                    <!-- Social Media 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-left">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                                    <circle cx="12" cy="13" r="4" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Content Creation</h3>
-                            <p class="service-description">
-                                Pembuatan konten visual yang menarik dan engaging untuk feed, story, dan reels sosial
-                                media
-                                Anda.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Photo</span>
-                                <span class="service-tag">Video</span>
-                                <span class="service-tag">Reels</span>
-                                <span class="service-tag">Story</span>
-                                <span class="service-tag">Carousel</span>
-                                <span class="service-tag">Motion</span>
-                            </div>
-                        </div>
+            <div class="service-container" data-services="socmed" style="display:none;">
+                <div class="bento-grid">
+                    <div class="bento-card fade-in-left">
+                        <h3 class="bento-card-title" data-i18n="services.soc1.title">Content Creation</h3>
+                        <p class="bento-card-desc" data-i18n="services.soc1.desc">Konten visual menarik untuk feed, story,
+                            dan reels.</p>
+                        <div class="bento-tags"><span class="bento-tag">Photo</span><span
+                                class="bento-tag">Video</span><span class="bento-tag">Reels</span><span
+                                class="bento-tag">Story</span><span class="bento-tag">Carousel</span></div>
                     </div>
-
-                    <!-- Social Media 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-right">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                                    <line x1="12" y1="22.08" x2="12" y2="12" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Social Media Strategy</h3>
-                            <p class="service-description">
-                                Strategi growth dan engagement yang terukur untuk meningkatkan brand awareness dan
-                                followers
-                                Anda.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Growth</span>
-                                <span class="service-tag">Planning</span>
-                                <span class="service-tag">Calendar</span>
-                                <span class="service-tag">Analytics</span>
-                                <span class="service-tag">Insights</span>
-                                <span class="service-tag">KPI</span>
-                            </div>
-                        </div>
+                    <div class="bento-card fade-in-right">
+                        <h3 class="bento-card-title" data-i18n="services.soc2.title">Social Media Strategy</h3>
+                        <p class="bento-card-desc" data-i18n="services.soc2.desc">Strategi growth dan engagement terukur
+                            untuk brand awareness.</p>
+                        <div class="bento-tags"><span class="bento-tag">Growth</span><span
+                                class="bento-tag">Planning</span><span class="bento-tag">Analytics</span><span
+                                class="bento-tag">KPI</span></div>
                     </div>
-
-                    <!-- Social Media 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-left">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                                    <circle cx="9" cy="7" r="4" />
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Community Management</h3>
-                            <p class="service-description">
-                                Kelola komunitas dan interaksi dengan followers untuk membangun hubungan yang kuat
-                                dengan
-                                audience.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Engagement</span>
-                                <span class="service-tag">Response</span>
-                                <span class="service-tag">DM</span>
-                                <span class="service-tag">Comments</span>
-                                <span class="service-tag">Moderation</span>
-                                <span class="service-tag">Support</span>
-                            </div>
-                        </div>
+                    <div class="bento-card fade-in-left">
+                        <h3 class="bento-card-title" data-i18n="services.soc3.title">Community Management</h3>
+                        <p class="bento-card-desc" data-i18n="services.soc3.desc">Kelola komunitas dan interaksi untuk
+                            hubungan yang kuat.</p>
+                        <div class="bento-tags"><span class="bento-tag">Engagement</span><span
+                                class="bento-tag">Response</span><span class="bento-tag">Moderation</span></div>
                     </div>
-
-                    <!-- Social Media 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="service-card fade-in-right">
-                            <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Paid Advertising</h3>
-                            <p class="service-description">
-                                Iklan berbayar yang efektif di Instagram, Facebook, TikTok untuk menjangkau target
-                                audience
-                                yang tepat.
-                            </p>
-                            <div class="service-tags">
-                                <span class="service-tag">Meta Ads</span>
-                                <span class="service-tag">TikTok Ads</span>
-                                <span class="service-tag">Targeting</span>
-                                <span class="service-tag">Retargeting</span>
-                                <span class="service-tag">ROAS</span>
-                                <span class="service-tag">A/B Testing</span>
-                            </div>
-                        </div>
+                    <div class="bento-card fade-in-right">
+                        <h3 class="bento-card-title" data-i18n="services.soc4.title">Paid Advertising</h3>
+                        <p class="bento-card-desc" data-i18n="services.soc4.desc">Iklan berbayar efektif di Instagram,
+                            Facebook, TikTok.</p>
+                        <div class="bento-tags"><span class="bento-tag">Meta Ads</span><span class="bento-tag">TikTok
+                                Ads</span><span class="bento-tag">Targeting</span><span class="bento-tag">ROAS</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- PORTFOLIO -->
     <section class="section portfolio" id="portfolio">
         <div class="container">
-            <h2 class="section-title fade-in">Karya Kami</h2>
-
+            <div class="section-header fade-in">
+                <div class="section-label"><i data-lucide="briefcase"></i> <span data-i18n="portfolio.badge">PROJECT
+                        KAMI</span></div>
+                <h2 class="section-title" data-i18n="portfolio.title">Karya<br><span class="section-title-muted">Terbaik
+                        Kami</span></h2>
+            </div>
             <div class="filter-tabs fade-in">
-                <button class="filter-tab active" data-filter="all">Semua</button>
+                <button class="filter-tab active" data-filter="all" data-i18n="portfolio.all">Semua</button>
                 <button class="filter-tab" data-filter="web-app">Web App</button>
                 <button class="filter-tab" data-filter="landing">Landing Page</button>
                 <button class="filter-tab" data-filter="admin-dashboard">Admin Dashboard</button>
                 <button class="filter-tab" data-filter="payment">Payment Gateway</button>
                 <button class="filter-tab" data-filter="booking">Booking System</button>
-                <button class="filter-tab" data-filter="content">Content Creation</button>
-                <button class="filter-tab" data-filter="socmed">Social Media</button>
-                <button class="filter-tab" data-filter="branding">Branding</button>
+                <button class="filter-tab" data-filter="design">Graphic Design</button>
             </div>
-
-            <div class="portfolio-grid stagger" id="portfolioGrid">
-                <!-- IT FEST 2025 -->
-                <div class="portfolio-card" data-category="landing">
-                    <img src="/images/portfolio/itfest-2025.png" alt="IT FEST 2025" class="portfolio-image"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Landing Page</span>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-card" data-category="landing"><img src="/images/portfolio/itfest-2025.png"
+                        alt="IT FEST 2025" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Landing Page</span>
                         <h4 class="portfolio-title">IT FEST 2025</h4>
-                        <div class="portfolio-tech">
-                            <span>React</span>
-                            <span>Vite</span>
-                            <span>Animation</span>
-                        </div>
+                        <div class="portfolio-tech"><span>React</span><span>•</span><span>Vite</span></div>
                     </div>
                 </div>
-
-                <!-- IFL Chapter Malang -->
-                <div class="portfolio-card" data-category="web-app">
-                    <img src="/images/portfolio/ifl-malang.png" alt="IFL Chapter Malang" class="portfolio-image"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Web App</span>
+                <div class="portfolio-card" data-category="web-app"><img src="/images/portfolio/ifl-malang.png"
+                        alt="IFL Chapter Malang" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Web App</span>
                         <h4 class="portfolio-title">IFL Chapter Malang</h4>
-                        <div class="portfolio-tech">
-                            <span>Laravel</span>
-                            <span>MySQL</span>
-                            <span>Livewire</span>
-                        </div>
+                        <div class="portfolio-tech"><span>Laravel</span><span>•</span><span>MySQL</span></div>
                     </div>
                 </div>
-
-                <!-- Akademi Competition -->
-                <div class="portfolio-card" data-category="payment">
-                    <img src="/images/portfolio/akademi-competition.png" alt="Akademi Competition"
-                        class="portfolio-image" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Payment Gateway</span>
+                <div class="portfolio-card" data-category="payment"><img src="/images/portfolio/akademi-competition.png"
+                        alt="Akademi Competition" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Payment Gateway</span>
                         <h4 class="portfolio-title">Akademi Competition</h4>
-                        <div class="portfolio-tech">
-                            <span>Laravel</span>
-                            <span>Midtrans</span>
-                            <span>Dashboard</span>
-                        </div>
+                        <div class="portfolio-tech"><span>Laravel</span><span>•</span><span>Midtrans</span></div>
                     </div>
                 </div>
-
-                <!-- KBMDSI 2025 -->
-                <div class="portfolio-card" data-category="landing">
-                    <img src="/images/portfolio/kbmdsi-2025.png" alt="KBMDSI 2025" class="portfolio-image"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Landing Page</span>
+                <div class="portfolio-card" data-category="landing"><img src="/images/portfolio/kbmdsi-2025.png"
+                        alt="KBMDSI 2025" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Landing Page</span>
                         <h4 class="portfolio-title">KBMDSI 2025</h4>
-                        <div class="portfolio-tech">
-                            <span>Laravel</span>
-                            <span>Blade</span>
-                            <span>Responsive</span>
-                        </div>
+                        <div class="portfolio-tech"><span>Laravel</span><span>•</span><span>Blade</span></div>
                     </div>
                 </div>
-
-                <!-- Karvin Badminton -->
-                <div class="portfolio-card" data-category="booking">
-                    <img src="/images/portfolio/karvin-badminton.png" alt="Karvin Badminton" class="portfolio-image"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Booking System</span>
+                <div class="portfolio-card" data-category="booking"><img src="/images/portfolio/karvin-badminton.png"
+                        alt="Karvin Badminton" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Booking System</span>
                         <h4 class="portfolio-title">Karvin Badminton</h4>
-                        <div class="portfolio-tech">
-                            <span>Laravel</span>
-                            <span>Booking</span>
-                            <span>Responsive</span>
-                        </div>
+                        <div class="portfolio-tech"><span>Laravel</span><span>•</span><span>Booking</span></div>
                     </div>
                 </div>
-
-                <!-- Inventory System -->
-                <div class="portfolio-card" data-category="admin-dashboard">
-                    <img src="/images/portfolio/inventory-system.png" alt="Inventory System" class="portfolio-image"
+                <div class="portfolio-card" data-category="admin-dashboard"><img
+                        src="/images/portfolio/inventory-system.png" alt="Inventory System" class="portfolio-image"
                         loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Admin Dashboard</span>
+                    <div class="portfolio-overlay"><span class="portfolio-category">Admin Dashboard</span>
                         <h4 class="portfolio-title">Inventory System</h4>
-                        <div class="portfolio-tech">
-                            <span>Laravel</span>
-                            <span>Livewire</span>
-                            <span>MySQL</span>
-                        </div>
+                        <div class="portfolio-tech"><span>Laravel</span><span>•</span><span>Livewire</span></div>
                     </div>
                 </div>
-
-                <!-- Page 2 starts here -->
-
-                <!-- Admin Panel -->
-                <div class="portfolio-card" data-category="admin-dashboard">
-                    <img src="/images/portfolio/admin-panel.png" alt="Admin Panel" class="portfolio-image"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Admin Dashboard</span>
+                <div class="portfolio-card" data-category="admin-dashboard"><img src="/images/portfolio/admin-panel.png"
+                        alt="Admin Panel" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Admin Dashboard</span>
                         <h4 class="portfolio-title">Karvin Admin Panel</h4>
-                        <div class="portfolio-tech">
-                            <span>Laravel</span>
-                            <span>Filament</span>
-                            <span>Analytics</span>
-                        </div>
+                        <div class="portfolio-tech"><span>Laravel</span><span>•</span><span>Filament</span></div>
                     </div>
                 </div>
-
-                <!-- Karvin Payment -->
-                <div class="portfolio-card" data-category="payment">
-                    <img src="/images/portfolio/karvin-payment.png" alt="Karvin Payment" class="portfolio-image"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Payment Gateway</span>
+                <div class="portfolio-card" data-category="payment"><img src="/images/portfolio/karvin-payment.png"
+                        alt="Karvin Payment" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Payment Gateway</span>
                         <h4 class="portfolio-title">Karvin Payment</h4>
-                        <div class="portfolio-tech">
-                            <span>Midtrans</span>
-                            <span>Laravel</span>
-                            <span>Booking</span>
-                        </div>
+                        <div class="portfolio-tech"><span>Midtrans</span><span>•</span><span>Laravel</span></div>
                     </div>
                 </div>
-
-                <!-- Marirasa Bakpao -->
-                <div class="portfolio-card" data-category="landing">
-                    <img src="/images/portfolio/marirasa.png" alt="Marirasa Bakpao" class="portfolio-image"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-category">Landing Page</span>
+                <div class="portfolio-card" data-category="landing"><img src="/images/portfolio/marirasa.png"
+                        alt="Marirasa Bakpao" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Landing Page</span>
                         <h4 class="portfolio-title">Marirasa Bakpao</h4>
-                        <div class="portfolio-tech">
-                            <span>HTML/CSS</span>
-                            <span>WhatsApp API</span>
-                            <span>SEO</span>
-                        </div>
+                        <div class="portfolio-tech"><span>HTML/CSS</span><span>•</span><span>WhatsApp API</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="design"><img src="/images/portfolio/nst-project.jpg"
+                        alt="NST Project Season 1" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Graphic Design</span>
+                        <h4 class="portfolio-title">NST Project Season 1</h4>
+                        <div class="portfolio-tech"><span>Social Media</span><span>•</span><span>E-Sports</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="design"><img src="/images/portfolio/farewell-kenboy.jpg"
+                        alt="Farewell Kenboy" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Graphic Design</span>
+                        <h4 class="portfolio-title">Farewell Kenboy</h4>
+                        <div class="portfolio-tech"><span>Social Media</span><span>•</span><span>E-Sports</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="web-app"><img src="/images/portfolio/sipenyu-presensi.jpg"
+                        alt="SIPENYU Presensi" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Web App</span>
+                        <h4 class="portfolio-title">SIPENYU Presensi</h4>
+                        <div class="portfolio-tech"><span>Web App</span><span>•</span><span>System</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="design"><img src="/images/portfolio/pioner-gids.jpg"
+                        alt="Pioner Gids" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay"><span class="portfolio-category">Graphic Design</span>
+                        <h4 class="portfolio-title">Pioner Gids Qualified</h4>
+                        <div class="portfolio-tech"><span>Social Media</span><span>•</span><span>E-Sports</span></div>
                     </div>
                 </div>
             </div>
-
-            <!-- Portfolio Pagination -->
             <div class="portfolio-pagination fade-in">
-                <button class="pagination-btn" id="prevPage" disabled>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                        <polyline points="15 18 9 12 15 6" />
-                    </svg>
-                </button>
+                <button class="pagination-btn" id="prevPage" disabled><i data-lucide="chevron-left"></i></button>
                 <span class="pagination-info"><span id="currentPage">1</span> / <span id="totalPages">2</span></span>
-                <button class="pagination-btn" id="nextPage">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                        <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                </button>
+                <button class="pagination-btn" id="nextPage"><i data-lucide="chevron-right"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Modal -->
-    <div class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <img src="" alt="" class="modal-image" style="width: 100%; border-radius: 12px;">
-            <div style="padding: 2rem;">
-                <span class="modal-category"
-                    style="color: var(--color-secondary); text-transform: uppercase; font-size: 0.75rem;">Category</span>
-                <h3 class="modal-title" style="font-size: 1.5rem; margin: 0.5rem 0 1rem;">Project Title</h3>
-                <p class="modal-description" style="color: var(--color-text-secondary);">Deskripsi proyek akan muncul di
-                    sini.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Value / Testimonials Section -->
-    <section class="section value" id="value">
-        <div class="container">
-            <h2 class="section-title fade-in">Mengapa Memilih MAJIHOUSE?</h2>
-
-            <div class="value-grid stagger">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                        </svg>
-                    </div>
-                    <h4 class="value-title">Technical Excellence</h4>
-                    <p class="value-description">
-                        Kami selalu mengikuti perkembangan teknologi terkini, menggunakan framework modern dan best
-                        practices untuk memberikan solusi berkualitas tinggi.
-                    </p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="23 4 23 10 17 10" />
-                            <polyline points="1 20 1 14 7 14" />
-                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-                        </svg>
-                    </div>
-                    <h4 class="value-title">Agile Approach</h4>
-                    <p class="value-description">
-                        Proses pengembangan yang fleksibel dan iteratif yang menyesuaikan dengan kebutuhan Anda,
-                        memastikan
-                        delivery tepat waktu dan perbaikan berkelanjutan.
-                    </p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                            <line x1="9" y1="9" x2="15" y2="15" />
-                            <line x1="15" y1="9" x2="9" y2="15" />
-                        </svg>
-                    </div>
-                    <h4 class="value-title">Transparent Pricing</h4>
-                    <p class="value-description">
-                        Harga yang jelas dan transparan tanpa biaya tersembunyi. Kami memberikan penawaran detail agar
-                        Anda
-                        tahu persis investasi Anda.
-                    </p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
-                    </div>
-                    <h4 class="value-title">Post-Launch Support</h4>
-                    <p class="value-description">
-                        Hubungan kami tidak berakhir saat launch. Kami menyediakan support dan maintenance berkelanjutan
-                        untuk memastikan produk Anda berkembang.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Testimonials -->
-            <div class="testimonials-wrapper fade-in">
-                <div class="swiper testimonials-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="testimonial-slide">
-                                <p class="testimonial-quote">
-                                    MAJIHOUSE memberikan hasil melebihi ekspektasi kami. Perhatian mereka pada detail
-                                    dan
-                                    keahlian teknis mengubah visi kami menjadi platform yang indah dan fungsional.
-                                </p>
-                                <div class="testimonial-author">
-                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
-                                        alt="Client" class="testimonial-avatar">
-                                    <div class="testimonial-info">
-                                        <div class="testimonial-name">Dimas Pratama</div>
-                                        <div class="testimonial-role">CEO, TechStartup ID</div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-stars">★★★★★</div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-slide">
-                                <p class="testimonial-quote">
-                                    Bekerja dengan MAJIHOUSE adalah game-changer untuk bisnis e-commerce kami. Penjualan
-                                    meningkat 150% setelah platform baru diluncurkan.
-                                </p>
-                                <div class="testimonial-author">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
-                                        alt="Client" class="testimonial-avatar">
-                                    <div class="testimonial-info">
-                                        <div class="testimonial-name">Lia Amalia</div>
-                                        <div class="testimonial-role">Founder, Fashion Brand</div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-stars">★★★★★</div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-slide">
-                                <p class="testimonial-quote">
-                                    Profesionalisme dan komunikasi tim sangat luar biasa. Mereka selalu menginformasikan
-                                    kami di setiap tahap dan deliver tepat waktu.
-                                </p>
-                                <div class="testimonial-author">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-                                        alt="Client" class="testimonial-avatar">
-                                    <div class="testimonial-info">
-                                        <div class="testimonial-name">Sugondo Limin</div>
-                                        <div class="testimonial-role">CTO, FinanceApp</div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-stars">★★★★★</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
+    <!-- PRICING (Tabbed: Web Dev 3 tier + Social Media 4 tier) -->
     <section class="section pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title fade-in">Paket Harga Fleksibel</h2>
-
-            <div class="pricing-grid stagger">
-                <!-- Starter -->
-                <div class="pricing-card">
-                    <h3 class="pricing-tier">Starter</h3>
-                    <p class="pricing-description">Cocok untuk landing page dan website sederhana</p>
-                    <div class="pricing-box">
-                        <span class="pricing-label">Mulai dari</span>
-                        <span class="pricing-original">Rp. 1.500.000</span>
-                        <span class="pricing-price">Rp. 750.000</span>
+            <div class="section-header fade-in">
+                <div class="section-label"><i data-lucide="zap"></i> <span data-i18n="pricing.badge">HARGA</span></div>
+                <h2 class="section-title" data-i18n="pricing.title">Paket Harga<br><span
+                        class="section-title-muted">Fleksibel</span></h2>
+            </div>
+            <div class="service-category-toggle fade-in" id="pricingToggle">
+                <button class="category-btn active" data-pricing="webdev">Web Development</button>
+                <button class="category-btn" data-pricing="socmed">Social Media</button>
+            </div>
+            <!-- Web Dev Pricing (3 tiers) -->
+            <div class="pricing-container" data-pricing-content="webdev">
+                <div class="pricing-grid">
+                    <div class="pricing-card fade-in">
+                        <h3 class="pricing-tier">Starter</h3>
+                        <p class="pricing-description" data-i18n="pricing.starter.desc">Cocok untuk landing page dan website
+                            sederhana</p>
+                        <div class="pricing-box"><span class="pricing-label" data-i18n="pricing.from">Mulai dari</span><span
+                                class="pricing-original">Rp. 1.500.000</span><span class="pricing-price">Rp. 500.000</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li data-i18n="pricing.f1.1">Landing Page / Website Sederhana</li>
+                            <li data-i18n="pricing.f1.2">Desain Responsif</li>
+                            <li data-i18n="pricing.f1.3">Hingga 5 Halaman</li>
+                            <li data-i18n="pricing.f1.4">Basic SEO Setup</li>
+                            <li data-i18n="pricing.f1.5">Integrasi Form Kontak</li>
+                            <li data-i18n="pricing.f1.6">1 Bulan Support</li>
+                        </ul><a href="#contact" class="btn btn-outline" style="width:100%"
+                            data-i18n="pricing.btn.start">Mulai
+                            Sekarang</a>
                     </div>
-                    <ul class="pricing-features">
-                        <li>Landing Page / Website Sederhana</li>
-                        <li>Desain Responsif</li>
-                        <li>Hingga 5 Halaman</li>
-                        <li>Basic SEO Setup</li>
-                        <li>Integrasi Form Kontak</li>
-                        <li>1 Bulan Support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Mulai Sekarang</a>
+                    <div class="pricing-card popular fade-in"><span class="popular-badge"
+                            data-i18n="pricing.popular">Populer</span>
+                        <h3 class="pricing-tier">Custom</h3>
+                        <p class="pricing-description" data-i18n="pricing.custom.desc">Solusi fleksibel sesuai kebutuhan
+                            bisnis
+                            Anda</p>
+                        <div class="pricing-box"><span class="pricing-label" data-i18n="pricing.from">Mulai dari</span><span
+                                class="pricing-original">Rp. 3.500.000</span><span class="pricing-price">Rp.
+                                2.000.000</span></div>
+                        <ul class="pricing-features">
+                            <li data-i18n="pricing.f2.1">Aplikasi Web Lengkap</li>
+                            <li data-i18n="pricing.f2.2">Custom UI/UX Design</li>
+                            <li data-i18n="pricing.f2.3">User Authentication</li>
+                            <li data-i18n="pricing.f2.4">Integrasi Database</li>
+                            <li data-i18n="pricing.f2.5">Admin Dashboard</li>
+                            <li data-i18n="pricing.f2.6">API Development</li>
+                            <li data-i18n="pricing.f2.7">3 Bulan Support</li>
+                        </ul><a href="#contact" class="btn btn-primary" style="width:100%"
+                            data-i18n="pricing.btn.contact">Hubungi Kami</a>
+                    </div>
+                    <div class="pricing-card fade-in">
+                        <h3 class="pricing-tier">Professional</h3>
+                        <p class="pricing-description" data-i18n="pricing.pro.desc">Cocok untuk aplikasi web skala besar</p>
+                        <div class="pricing-box"><span class="pricing-label" data-i18n="pricing.from">Mulai dari</span><span
+                                class="pricing-original">Rp. 7.500.000</span><span class="pricing-price">Rp.
+                                3.500.000</span></div>
+                        <ul class="pricing-features">
+                            <li data-i18n="pricing.f3.1">Aplikasi Skala Besar</li>
+                            <li data-i18n="pricing.f3.2">Integrasi Sistem Kompleks</li>
+                            <li data-i18n="pricing.f3.3">Dedicated Project Manager</li>
+                            <li data-i18n="pricing.f3.4">Priority Support</li>
+                            <li data-i18n="pricing.f3.5">Custom SLA</li>
+                            <li data-i18n="pricing.f3.6">Training & Dokumentasi</li>
+                            <li data-i18n="pricing.f3.7">Ongoing Maintenance</li>
+                        </ul><a href="#contact" class="btn btn-outline" style="width:100%"
+                            data-i18n="pricing.btn.start">Mulai
+                            Sekarang</a>
+                    </div>
                 </div>
-
-                <!-- Custom (Populer) -->
-                <div class="pricing-card popular">
-                    <span class="popular-badge">Populer</span>
-                    <h3 class="pricing-tier">Custom</h3>
-                    <p class="pricing-description">Solusi fleksibel sesuai kebutuhan bisnis Anda</p>
-                    <div class="pricing-box">
-                        <span class="pricing-label">Mulai dari</span>
-                        <span class="pricing-original">Rp. 3.500.000</span>
-                        <span class="pricing-price">Rp. 2.500.000</span>
+            </div>
+            <!-- Social Media Pricing (4 tiers) -->
+            <div class="pricing-container" data-pricing-content="socmed" style="display:none;">
+                <div class="pricing-grid four-cols">
+                    <div class="pricing-card fade-in">
+                        <h3 class="pricing-tier">Basic</h3>
+                        <p class="pricing-description" data-i18n="pricing.soc.basic.desc">Untuk UMKM yang baru mulai</p>
+                        <div class="pricing-box"><span class="pricing-label" data-i18n="pricing.month">Per bulan</span><span
+                                class="pricing-price">Rp.
+                                500.000</span></div>
+                        <ul class="pricing-features">
+                            <li data-i18n="pricing.soc.f1.1">8 Post Feed / bulan</li>
+                            <li data-i18n="pricing.soc.f1.2">4 Story / bulan</li>
+                            <li data-i18n="pricing.soc.f1.3">Basic Design Template</li>
+                            <li data-i18n="pricing.soc.f1.4">Caption Writing</li>
+                            <li data-i18n="pricing.soc.f1.5">1 Platform</li>
+                        </ul><a href="#contact" class="btn btn-outline" style="width:100%"
+                            data-i18n="pricing.btn.choose">Pilih Paket</a>
                     </div>
-                    <ul class="pricing-features">
-                        <li>Aplikasi Web Lengkap</li>
-                        <li>Custom UI/UX Design</li>
-                        <li>User Authentication</li>
-                        <li>Integrasi Database</li>
-                        <li>Admin Dashboard</li>
-                        <li>API Development</li>
-                        <li>3 Bulan Support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Hubungi Kami</a>
-                </div>
-
-                <!-- Professional -->
-                <div class="pricing-card">
-                    <h3 class="pricing-tier">Professional</h3>
-                    <p class="pricing-description">Cocok untuk aplikasi web skala besar</p>
-                    <div class="pricing-box">
-                        <span class="pricing-label">Mulai dari</span>
-                        <span class="pricing-original">Rp. 7.500.000</span>
-                        <span class="pricing-price">Rp. 5.000.000</span>
+                    <div class="pricing-card popular fade-in"><span class="popular-badge"
+                            data-i18n="pricing.popular">Populer</span>
+                        <h3 class="pricing-tier">Growth</h3>
+                        <p class="pricing-description" data-i18n="pricing.soc.growth.desc">Untuk brand yang ingin berkembang
+                        </p>
+                        <div class="pricing-box"><span class="pricing-label" data-i18n="pricing.month">Per bulan</span><span
+                                class="pricing-price">Rp.
+                                1.000.000</span></div>
+                        <ul class="pricing-features">
+                            <li data-i18n="pricing.soc.f2.1">12 Post Feed / bulan</li>
+                            <li data-i18n="pricing.soc.f2.2">8 Story / bulan</li>
+                            <li data-i18n="pricing.soc.f2.3">4 Reels / bulan</li>
+                            <li data-i18n="pricing.soc.f2.4">Custom Design</li>
+                            <li data-i18n="pricing.soc.f2.5">Hashtag Strategy</li>
+                            <li data-i18n="pricing.soc.f2.6">2 Platform</li>
+                            <li data-i18n="pricing.soc.f2.7">Monthly Report</li>
+                        </ul><a href="#contact" class="btn btn-primary" style="width:100%"
+                            data-i18n="pricing.btn.choose">Pilih Paket</a>
                     </div>
-                    <ul class="pricing-features">
-                        <li>Aplikasi Skala Besar</li>
-                        <li>Integrasi Sistem Kompleks</li>
-                        <li>Dedicated Project Manager</li>
-                        <li>Priority Support</li>
-                        <li>Custom SLA</li>
-                        <li>Training & Dokumentasi</li>
-                        <li>Ongoing Maintenance</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline" style="width: 100%;">Mulai Sekarang</a>
+                    <div class="pricing-card fade-in">
+                        <h3 class="pricing-tier">Premium</h3>
+                        <p class="pricing-description" data-i18n="pricing.soc.premium.desc">Untuk brand dengan ambisi besar
+                        </p>
+                        <div class="pricing-box"><span class="pricing-label" data-i18n="pricing.month">Per bulan</span><span
+                                class="pricing-price">Rp.
+                                2.000.000</span></div>
+                        <ul class="pricing-features">
+                            <li data-i18n="pricing.soc.f3.1">20 Post Feed / bulan</li>
+                            <li data-i18n="pricing.soc.f3.2">15 Story / bulan</li>
+                            <li data-i18n="pricing.soc.f3.3">8 Reels / bulan</li>
+                            <li data-i18n="pricing.soc.f3.4">Premium Design</li>
+                            <li data-i18n="pricing.soc.f3.5">Content Calendar</li>
+                            <li data-i18n="pricing.soc.f3.6">3 Platform</li>
+                            <li data-i18n="pricing.soc.f3.7">Engagement Management</li>
+                            <li data-i18n="pricing.soc.f3.8">Weekly Report</li>
+                        </ul><a href="#contact" class="btn btn-outline" style="width:100%"
+                            data-i18n="pricing.btn.choose">Pilih Paket</a>
+                    </div>
+                    <div class="pricing-card fade-in">
+                        <h3 class="pricing-tier">Enterprise</h3>
+                        <p class="pricing-description" data-i18n="pricing.soc.enterprise.desc">Solusi lengkap end-to-end</p>
+                        <div class="pricing-box"><span class="pricing-label" data-i18n="pricing.month">Per bulan</span><span
+                                class="pricing-price">Custom</span></div>
+                        <ul class="pricing-features">
+                            <li data-i18n="pricing.soc.f4.1">Unlimited Post</li>
+                            <li data-i18n="pricing.soc.f4.2">Video Production</li>
+                            <li data-i18n="pricing.soc.f4.3">Paid Ads Management</li>
+                            <li data-i18n="pricing.soc.f4.4">Influencer Collab</li>
+                            <li data-i18n="pricing.soc.f4.5">All Platform</li>
+                            <li data-i18n="pricing.soc.f4.6">Dedicated Manager</li>
+                            <li data-i18n="pricing.soc.f4.7">Daily Report</li>
+                            <li data-i18n="pricing.soc.f4.8">Priority Support</li>
+                        </ul><a href="#contact" class="btn btn-outline" style="width:100%"
+                            data-i18n="pricing.btn.contact">Hubungi Kami</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- WORKFLOW -->
+    <section class="section workflow" id="workflow">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label"><i data-lucide="rocket"></i> <span data-i18n="workflow.badge">ALUR
+                        KERJA</span></div>
+                <h2 class="section-title" data-i18n="workflow.title">Bagaimana<br><span class="section-title-muted">Kami
+                        Bekerja</span></h2>
+            </div>
+            <div class="workflow-grid fade-in">
+                <div class="workflow-step">
+                    <div class="workflow-number">1</div>
+                    <div class="workflow-line"></div>
+                    <h4 class="workflow-step-title" data-i18n="workflow.step1.title">Konsultasi</h4>
+                    <p class="workflow-step-desc" data-i18n="workflow.step1.desc">Diskusi kebutuhan dan tujuan project Anda
+                    </p>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-number">2</div>
+                    <div class="workflow-line"></div>
+                    <h4 class="workflow-step-title" data-i18n="workflow.step2.title">Perencanaan</h4>
+                    <p class="workflow-step-desc" data-i18n="workflow.step2.desc">Wireframe, timeline, dan strategi
+                        development</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-number">3</div>
+                    <div class="workflow-line"></div>
+                    <h4 class="workflow-step-title" data-i18n="workflow.step3.title">Development</h4>
+                    <p class="workflow-step-desc" data-i18n="workflow.step3.desc">Coding dan implementasi dengan update
+                        berkala</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-number">4</div>
+                    <div class="workflow-line"></div>
+                    <h4 class="workflow-step-title" data-i18n="workflow.step4.title">Quality Check</h4>
+                    <p class="workflow-step-desc" data-i18n="workflow.step4.desc">Testing menyeluruh dan revisi untuk
+                        kesempurnaan</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-number">5</div>
+                    <h4 class="workflow-step-title" data-i18n="workflow.step5.title">Serah Terima</h4>
+                    <p class="workflow-step-desc" data-i18n="workflow.step5.desc">Deployment, training, dan support
+                        berkelanjutan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label"><i data-lucide="help-circle"></i> <span data-i18n="faq.badge">FAQ</span></div>
+                <h2 class="section-title" data-i18n="faq.title">Pertanyaan<br><span class="section-title-muted">Yang Sering
+                        Diajukan</span></h2>
+            </div>
+            <div class="faq-list fade-in">
+                <div class="faq-item"><button class="faq-question" data-i18n="faq.q1">Berapa lama waktu pengerjaan
+                        project?<i data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text" data-i18n="faq.a1">Waktu pengerjaan bervariasi tergantung kompleksitas
+                            project. Landing page
+                            biasanya 1-2 minggu, web app custom 4-8 minggu, dan sistem enterprise 2-4 bulan.</p>
+                    </div>
+                </div>
+                <div class="faq-item"><button class="faq-question" data-i18n="faq.q2">Apakah bisa request revisi?<i
+                            data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text" data-i18n="faq.a2">Ya! Kami menyediakan revisi pada setiap tahap
+                            pengerjaan. Kami percaya
+                            bahwa feedback berkelanjutan menghasilkan produk terbaik.</p>
+                    </div>
+                </div>
+                <div class="faq-item"><button class="faq-question" data-i18n="faq.q3">Apakah ada garansi setelah project
+                        selesai?<i data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text" data-i18n="faq.a3">Ya, setiap paket sudah termasuk masa support gratis
+                            (1-3 bulan tergantung
+                            paket). Kami juga menawarkan paket maintenance bulanan.</p>
+                    </div>
+                </div>
+                <div class="faq-item"><button class="faq-question" data-i18n="faq.q4">Teknologi apa yang digunakan?<i
+                            data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text" data-i18n="faq.a4">Kami menggunakan teknologi modern seperti React,
+                            Next.js, Vue.js,
+                            Laravel, Node.js, dan PostgreSQL. Pemilihan stack disesuaikan dengan kebutuhan project.</p>
+                    </div>
+                </div>
+                <div class="faq-item"><button class="faq-question" data-i18n="faq.q5">Bagaimana sistem pembayarannya?<i
+                            data-lucide="plus" class="faq-icon"></i></button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text" data-i18n="faq.a5">Pembayaran dilakukan bertahap: 50% di awal (DP) dan
+                            50% setelah project
+                            selesai. Untuk project besar, bisa dicicil dalam 3 termin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="section contact" id="contact">
         <div class="container">
-            <h2 class="section-title fade-in">Mari Bangun Sesuatu yang Hebat Bersama</h2>
-
+            <div class="section-header fade-in">
+                <div class="section-label"><i data-lucide="mail"></i> <span data-i18n="contact.badge">KONTAK</span></div>
+                <h2 class="section-title" data-i18n="contact.title">Mari Bangun Sesuatu<br><span
+                        class="section-title-muted">Yang Hebat Bersama</span>
+                </h2>
+            </div>
             <div class="contact-grid">
                 <div class="contact-info fade-in-left">
-                    <h3>Hubungi Kami</h3>
-
+                    <h3 data-i18n="contact.info.title">Hubungi Kami</h3>
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                <polyline points="22,6 12,13 2,6" />
-                            </svg>
-                        </div>
+                        <div class="contact-icon"><i data-lucide="mail"></i></div>
                         <div>
-                            <div class="contact-label">Email</div>
+                            <div class="contact-label" data-i18n="contact.label.email">Email</div>
                             <div class="contact-value">majihouse.studio@gmail.com</div>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                            </svg>
-                        </div>
+                        <div class="contact-icon"><i data-lucide="phone"></i></div>
                         <div>
-                            <div class="contact-label">WhatsApp</div>
+                            <div class="contact-label" data-i18n="contact.label.whatsapp">WhatsApp</div>
                             <div class="contact-value">+62 898-7749-739</div>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                                <circle cx="12" cy="10" r="3" />
-                            </svg>
-                        </div>
+                        <div class="contact-icon"><i data-lucide="map-pin"></i></div>
                         <div>
-                            <div class="contact-label">Lokasi</div>
-                            <div class="contact-value">Pontianak, Kalimantan Barat, Indonesia</div>
+                            <div class="contact-label" data-i18n="contact.label.location">Lokasi</div>
+                            <div class="contact-value" data-i18n="contact.location.value">Pontianak, Kalimantan Barat</div>
                         </div>
                     </div>
-
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="#" class="social-link" aria-label="LinkedIn"><svg width="20" height="20"
+                                viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg>
-                        </a>
+                            </svg></a>
                         <a href="https://www.instagram.com/majihouse.studio/" class="social-link"
-                            aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            </svg></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                            </svg>
-                        </a>
+                            </svg></a>
                     </div>
                 </div>
-
                 <div class="contact-form fade-in-right">
                     <div class="form-content">
                         <form>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label class="form-label" for="name">Nama *</label>
-                                    <input type="text" id="name" name="name" class="form-input" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="email">Email *</label>
-                                    <input type="email" id="email" name="email" class="form-input" required>
+                                <div class="form-group"><label class="form-label" for="name" data-i18n="form.name">Nama
+                                        *</label><input type="text" id="name" name="name" class="form-input" required></div>
+                                <div class="form-group"><label class="form-label" for="email" data-i18n="form.email">Email
+                                        *</label><input type="email" id="email" name="email" class="form-input" required>
                                 </div>
                             </div>
-
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label class="form-label" for="phone">Telepon</label>
-                                    <input type="tel" id="phone" name="phone" class="form-input">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="service">Layanan yang Diminati</label>
-                                    <select id="service" name="service" class="form-select">
-                                        <option value="">Pilih layanan</option>
+                                <div class="form-group"><label class="form-label" for="phone"
+                                        data-i18n="form.phone">Telepon</label><input type="tel" id="phone" name="phone"
+                                        class="form-input"></div>
+                                <div class="form-group"><label class="form-label" for="service"
+                                        data-i18n="form.service">Layanan</label><select id="service" name="service"
+                                        class="form-select">
+                                        <option value="" data-i18n="form.service.placeholder">Pilih layanan</option>
                                         <option value="web-development">Web Development</option>
-                                        <option value="system-development">System Development</option>
-                                        <option value="data-analytics">Data Analytics</option>
-                                        <option value="ui-ux-design">UI/UX Design</option>
-                                        <option value="digital-solutions">Digital Solutions</option>
-                                    </select>
-                                </div>
+                                        <option value="system-development" data-i18n="services.web2.title">System
+                                            Development</option>
+                                        <option value="social-media">Social Media</option>
+                                        <option value="data-analytics" data-i18n="services.web3.title">Data Analytics
+                                        </option>
+                                        <option value="ui-ux-design" data-i18n="services.web4.title">UI/UX Design</option>
+                                    </select></div>
                             </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="budget">Kisaran Budget</label>
-                                <select id="budget" name="budget" class="form-select">
-                                    <option value="">Pilih kisaran budget</option>
-                                    <option value="1000000-2500000">Rp. 700.000 - Rp. 2.500.000</option>
-                                    <option value="2500000-5000000">Rp. 2.500.000 - Rp. 5.000.000</option>
-                                    <option value="5000000-10000000">Rp. 5.000.000 - Rp. 10.000.000</option>
-                                    <option value="10000000+">Rp. 10.000.000+</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="message">Pesan *</label>
-                                <textarea id="message" name="message" class="form-textarea" required
-                                    placeholder="Ceritakan tentang proyek Anda..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-submit">
-                                <span class="btn-text">Kirim Pesan</span>
-                                <span class="btn-spinner"></span>
-                            </button>
+                            <div class="form-group"><label class="form-label" for="message" data-i18n="form.message">Pesan
+                                    *</label><textarea id="message" name="message" class="form-textarea" required
+                                    placeholder="Ceritakan tentang proyek Anda..."
+                                    data-i18n-placeholder="form.message.placeholder"></textarea></div>
+                            <button type="submit" class="btn btn-primary btn-submit"><span class="btn-text"
+                                    data-i18n="form.submit">Kirim
+                                    Pesan</span><span class="btn-spinner"></span></button>
                         </form>
                     </div>
-
                     <div class="form-success">
                         <div class="success-icon">✓</div>
-                        <h3>Terima Kasih!</h3>
-                        <p style="color: var(--color-text-secondary);">Pesan Anda telah berhasil dikirim. Kami akan
-                            menghubungi Anda dalam 24 jam.</p>
+                        <h3 data-i18n="contact.success.title">Terima Kasih!</h3>
+                        <p style="color:var(--text-secondary)" data-i18n="contact.success.message">Pesan Anda telah berhasil
+                            dikirim. Kami akan menghubungi Anda
+                            dalam 24 jam.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="footer-logo-link">
-                        <img src="/images/majihouse-logo.png" alt="MAJIHOUSE Logo" class="footer-logo-img">
-                    </a>
-                    <p>Creative & Tech in One House. Kami mengubah visi Anda menjadi realitas digital.</p>
-                    <p style="font-size: 0.75rem; opacity: 0.7;">© 2024 MAJIHOUSE. All rights reserved.</p>
+                    <a href="#" class="footer-logo">majihouse</a>
+                    <p data-i18n="footer.desc">Creative & Tech in One House. Kami mengubah visi Anda menjadi realitas
+                        digital.</p>
+                    <p style="font-size:0.75rem;opacity:0.5;" data-i18n="footer.rights">© 2024 MAJIHOUSE. All rights
+                        reserved.</p>
                 </div>
-
                 <div class="footer-column">
-                    <h4 class="footer-title">Quick Links</h4>
+                    <h4 class="footer-title" data-i18n="footer.links">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#about">Tentang</a></li>
-                        <li><a href="#services">Layanan</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Kontak</a></li>
+                        <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Layanan</a></li>
+                        <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                        <li><a href="#pricing" data-i18n="nav.pricing">Harga</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
-                    <h4 class="footer-title">Layanan</h4>
+                    <h4 class="footer-title" data-i18n="footer.services">Layanan</h4>
                     <ul class="footer-links">
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">System Development</a></li>
-                        <li><a href="#services">Data Analytics</a></li>
-                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services" data-i18n="services.web1.title">Web Development</a></li>
+                        <li><a href="#services" data-i18n="services.web2.title">System Development</a></li>
+                        <li><a href="#services" data-i18n="services.web3.title">Data Analytics</a></li>
+                        <li><a href="#services" data-i18n="services.tab2">Social Media</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
-                    <h4 class="footer-title">Connect</h4>
+                    <h4 class="footer-title" data-i18n="footer.connect">Connect</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:majihouse.studio@gmail.com">majihouse.studio@gmail.com</a></li>
                         <li><a href="#">LinkedIn</a></li>
@@ -1195,9 +789,7 @@
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>salamalekom</p>
                 <p>Privacy Policy | Terms of Service</p>
             </div>
         </div>

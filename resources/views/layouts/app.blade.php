@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -26,11 +26,10 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Inter (like FtrTech) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Vite Assets -->
@@ -41,21 +40,15 @@
     <!-- Page Loader -->
     <div class="page-loader">
         <div class="loader-logo">
-            <img src="/images/majihouse-logo.png" alt="MAJIHOUSE" class="loader-logo-img">
+            <span class="loader-logo-text">majihouse</span>
         </div>
         <div class="loader-bar">
             <div class="loader-bar-inner"></div>
         </div>
     </div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
-
-    <!-- Particles Container -->
-    <div id="particles-container"></div>
-
-    <!-- Animated Gradient Background -->
-    <div class="gradient-bg"></div>
+    <!-- Grid Pattern Background -->
+    <div class="grid-bg"></div>
 
     @yield('content')
 

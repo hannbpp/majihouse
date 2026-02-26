@@ -5,11 +5,9 @@
 
 export class ContactForm {
     private form: HTMLFormElement | null = null;
-    private submitBtn: HTMLButtonElement | null = null;
 
     init(): void {
         this.form = document.querySelector('.contact-form form');
-        this.submitBtn = this.form?.querySelector('.btn-submit') || null;
 
         if (this.form) {
             this.initValidation();
@@ -99,23 +97,50 @@ export class ContactForm {
             const budgetEl = this.form?.querySelector('#budget') as HTMLSelectElement;
             const budget = budgetEl?.options[budgetEl.selectedIndex]?.text || '';
             const message = (this.form?.querySelector('#message') as HTMLTextAreaElement)?.value || '';
+            const currentLang = this.getCurrentLang();
+
+            const copy = currentLang === 'en'
+                ? {
+                    greeting: 'Hello MAJIHOUSE!',
+                    interest: 'I am interested in a consultation:',
+                    myData: 'My Details:',
+                    name: 'Name',
+                    email: 'Email',
+                    phone: 'Phone',
+                    service: 'Service',
+                    budget: 'Budget',
+                    message: 'Message:',
+                    sentFrom: 'Sent from MAJIHOUSE website',
+                }
+                : {
+                    greeting: 'Halo MAJIHOUSE!',
+                    interest: 'Saya tertarik untuk konsultasi:',
+                    myData: 'Data Saya:',
+                    name: 'Nama',
+                    email: 'Email',
+                    phone: 'Telepon',
+                    service: 'Layanan',
+                    budget: 'Budget',
+                    message: 'Pesan:',
+                    sentFrom: 'Dikirim dari website MAJIHOUSE',
+                };
 
             // Build WhatsApp message
-            const waMessage = `*Halo MAJIHOUSE!* 👋
+            const waMessage = `*${copy.greeting}* 👋
 
-Saya tertarik untuk konsultasi:
+${copy.interest}
 
-📋 *Data Saya:*
-• Nama: ${name}
-• Email: ${email}
-• Telepon: ${phone || '-'}
-• Layanan: ${service || '-'}
-• Budget: ${budget || '-'}
+📋 *${copy.myData}*
+• ${copy.name}: ${name}
+• ${copy.email}: ${email}
+• ${copy.phone}: ${phone || '-'}
+• ${copy.service}: ${service || '-'}
+• ${copy.budget}: ${budget || '-'}
 
-💬 *Pesan:*
+💬 *${copy.message}*
 ${message}
 
-_Dikirim dari website MAJIHOUSE_`;
+_${copy.sentFrom}_`;
 
             // WhatsApp number
             const waNumber = '628987749739';
@@ -125,7 +150,7 @@ _Dikirim dari website MAJIHOUSE_`;
             window.open(waUrl, '_blank');
 
             // Show success message
-            this.showSuccess();
+            this.showSuccess(currentLang);
         });
     }
 
@@ -155,7 +180,7 @@ _Dikirim dari website MAJIHOUSE_`;
         });
     }
 
-    private showSuccess(): void {
+    private showSuccess(lang: 'id' | 'en'): void {
         const formContent = this.form?.parentElement?.querySelector('.form-content');
         const successContent = this.form?.parentElement?.querySelector('.form-success');
 
@@ -164,8 +189,13 @@ _Dikirim dari website MAJIHOUSE_`;
             successContent.classList.add('show');
         }
 
-        this.showToast('Message sent successfully!', 'success');
+        this.showToast(lang === 'en' ? 'Message sent successfully!' : 'Pesan berhasil dikirim!', 'success');
         this.form?.reset();
+    }
+
+    private getCurrentLang(): 'id' | 'en' {
+        const lang = localStorage.getItem('majihouse_lang');
+        return lang === 'en' ? 'en' : 'id';
     }
 
     private showToast(message: string, type: 'success' | 'error'): void {

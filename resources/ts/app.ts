@@ -1,187 +1,166 @@
 /**
- * MAJIHOUSE - Main Application Entry
- * Initializes all components and animations
+ * MAJIHOUSE - Main Application Entry (FtrTech Style Redesign)
+ * Theme toggle, FAQ accordion, pricing toggle, animations, Lucide icons
  */
 
+// Lucide Icons
+import {
+    createIcons, Sun, Moon, ArrowRight, Clock, Code, Share2, Check,
+    Mail, Phone, MapPin, ChevronLeft, ChevronRight, Plus, Briefcase,
+    Globe, Palette, Layers, Settings, Zap, Users, Star, Shield,
+    MessageSquare, TrendingUp, BarChart3, Search, Heart, Coffee,
+    Rocket, Target, Award, Lightbulb, Cpu, Smartphone,
+    CircleQuestionMark as HelpCircle,
+    Database, Figma, Image, Paintbrush, PenTool, Server, CodeXml, Sparkles,
+    Quote, CircleCheckBig
+} from 'lucide';
+
 // Animations
-import { ParticleSystem } from './animations/particles';
-import { FlipWords } from './components/flip-words';
 import { CounterAnimation } from './animations/counter';
 import { ScrollAnimations } from './animations/scroll';
 
 // Components
 import { Navigation } from './components/navbar';
 import { Portfolio } from './components/portfolio';
-import { TestimonialsSlider } from './components/testimonials';
 import { ContactForm } from './components/contact';
 import { TechStackMarquee } from './components/techstack';
-
-// Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
+import { initLanguageToggle } from './components/lang';
 
 class App {
-    private particles: ParticleSystem;
-    private flipWords: FlipWords;
     private counter: CounterAnimation;
     private scroll: ScrollAnimations;
     private navigation: Navigation;
     private portfolio: Portfolio;
-    private testimonials: TestimonialsSlider;
     private contactForm: ContactForm;
     private techStack: TechStackMarquee;
 
     constructor() {
-        this.particles = new ParticleSystem();
-        this.flipWords = new FlipWords();
         this.counter = new CounterAnimation();
         this.scroll = new ScrollAnimations();
         this.navigation = new Navigation();
         this.portfolio = new Portfolio();
-        this.testimonials = new TestimonialsSlider();
         this.contactForm = new ContactForm();
         this.techStack = new TechStackMarquee();
     }
 
     init(): void {
-        // Wait for DOM to be ready
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => this.initComponents());
         } else {
             this.initComponents();
         }
-
-        // Handle page load animation
         window.addEventListener('load', () => this.hideLoader());
     }
 
     private initComponents(): void {
-        // Initialize animations (cursor removed)
-        this.particles.init();
+        // Initialize Lucide icons first so they're visible immediately
+        createIcons({
+            icons: {
+                Sun, Moon, ArrowRight, Clock, Code, Share2, Check,
+                Mail, Phone, MapPin, ChevronLeft, ChevronRight, Plus, Briefcase,
+                Globe, Palette, Layers, Settings, Zap, Users, Star, Shield,
+                MessageSquare, TrendingUp, BarChart3, Search, Heart, Coffee,
+                Rocket, Target, Award, Lightbulb, Cpu, Smartphone,
+                HelpCircle, Database, Figma, Image, Paintbrush, PenTool, Server, CodeXml, Sparkles,
+                Quote, CircleCheckBig
+            }
+        });
+
         this.scroll.init();
         this.counter.init();
-
-        // Initialize FlipWords effect
-        this.flipWords.init('.flip-words-container', [
-            'keren.',
-            'cantik.',
-            'modern.',
-            'menarik.',
-            'skena.',
-            'gen-z abis.',
-        ]);
-
-        // Initialize components
         this.navigation.init();
         this.portfolio.init();
-        this.testimonials.init();
         this.contactForm.init();
         this.techStack.init();
 
-        // Initialize service category toggle
+        // New features
+        this.initThemeToggle();
         this.initServiceCategoryToggle();
-
-        // Initialize button ripple effects
-        this.initRippleEffect();
+        this.initPricingToggle();
+        this.initFaqAccordion();
+        initLanguageToggle();
     }
 
+    // ---- Theme Toggle (Dark/Light) ----
+    private initThemeToggle(): void {
+        const toggle = document.getElementById('themeToggle');
+        if (!toggle) return;
+
+        // Load saved theme
+        const saved = localStorage.getItem('majihouse-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('majihouse-theme', next);
+        });
+    }
+
+    // ---- Service Category Toggle ----
     private initServiceCategoryToggle(): void {
-        const categoryBtns = document.querySelectorAll('.category-btn');
-        const serviceContainers = document.querySelectorAll('.service-container');
+        const categoryBtns = document.querySelectorAll('.service-category-toggle .category-btn[data-category]');
+        const serviceContainers = document.querySelectorAll('.service-container[data-services]');
 
         categoryBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const category = btn.getAttribute('data-category');
-
-                // Update active button
                 categoryBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                // Add pop animation
-                btn.classList.add('pop');
-                setTimeout(() => btn.classList.remove('pop'), 300);
-
-                // Show/hide service containers
                 serviceContainers.forEach(container => {
-                    const containerCategory = container.getAttribute('data-services');
-                    if (containerCategory === category) {
-                        (container as HTMLElement).style.display = 'block';
-
-                        // Re-trigger animations for the visible container
-                        this.triggerContainerAnimations(container as HTMLElement);
-                    } else {
-                        (container as HTMLElement).style.display = 'none';
-                    }
+                    const el = container as HTMLElement;
+                    el.style.display = container.getAttribute('data-services') === category ? 'block' : 'none';
                 });
             });
         });
     }
 
-    private triggerContainerAnimations(container: HTMLElement): void {
-        // Re-trigger fade animations
-        const animatedElements = container.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in');
-        animatedElements.forEach((el, index) => {
-            el.classList.remove('visible');
-            setTimeout(() => {
-                el.classList.add('visible');
-            }, index * 100);
-        });
+    // ---- Pricing Toggle (Web Dev / Social Media) ----
+    private initPricingToggle(): void {
+        const pricingBtns = document.querySelectorAll('#pricingToggle .category-btn[data-pricing]');
+        const pricingContainers = document.querySelectorAll('.pricing-container[data-pricing-content]');
 
-        // Re-trigger timeline dots
-        const timelineDots = container.querySelectorAll('.timeline-dot');
-        timelineDots.forEach((dot, index) => {
-            dot.classList.remove('glow-active');
-            setTimeout(() => {
-                dot.classList.add('glow-active');
-            }, index * 150);
-        });
+        pricingBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const pricing = btn.getAttribute('data-pricing');
+                pricingBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
-        // Trigger scroll event to recalculate timeline progress for this container
-        window.dispatchEvent(new Event('scroll'));
+                pricingContainers.forEach(container => {
+                    const el = container as HTMLElement;
+                    el.style.display = container.getAttribute('data-pricing-content') === pricing ? 'block' : 'none';
+                });
+            });
+        });
+    }
+
+    // ---- FAQ Accordion ----
+    private initFaqAccordion(): void {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (!question) return;
+
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close all
+                faqItems.forEach(i => i.classList.remove('active'));
+                // Toggle current
+                if (!isActive) item.classList.add('active');
+            });
+        });
     }
 
     private hideLoader(): void {
         const loader = document.querySelector('.page-loader');
-
         setTimeout(() => {
             loader?.classList.add('hidden');
-
-            // Remove from DOM after animation
-            setTimeout(() => {
-                loader?.remove();
-            }, 500);
-        }, 1500);
-    }
-
-    private initRippleEffect(): void {
-        const buttons = document.querySelectorAll('.btn');
-
-        buttons.forEach(button => {
-            button.addEventListener('click', (e: Event) => {
-                const mouseEvent = e as MouseEvent;
-                const btn = button as HTMLElement;
-
-                const ripple = document.createElement('span');
-                ripple.className = 'ripple';
-
-                const rect = btn.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-
-                ripple.style.width = ripple.style.height = `${size}px`;
-                ripple.style.left = `${mouseEvent.clientX - rect.left - size / 2}px`;
-                ripple.style.top = `${mouseEvent.clientY - rect.top - size / 2}px`;
-
-                btn.appendChild(ripple);
-
-                ripple.addEventListener('animationend', () => {
-                    ripple.remove();
-                });
-            });
-        });
+            setTimeout(() => loader?.remove(), 500);
+        }, 1000);
     }
 }
 
-// Initialize the application
 const app = new App();
 app.init();
