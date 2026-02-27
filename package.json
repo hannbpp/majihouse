@@ -3,7 +3,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build && mkdir -p dist/build && cp -R public/build/ dist/build/ && cp -R public/images/ dist/images/ && cp public/favicon.png dist/favicon.png && php artisan serve --port=8002 & sleep 3 && curl -s http://127.0.0.1:8002 > dist/index.html && sed -i.bak 's|http://127.0.0.1:8002||g' dist/index.html && rm dist/index.html.bak && kill $(lsof -t -i:8002)",
+        "build": "vite build",
+        "deploy": "vite build && mkdir -p dist/build dist/fonts && cp -R public/build/ dist/build/ && cp -R public/images/ dist/images/ && cp -R public/fonts/ dist/fonts/ && cp public/favicon.png dist/favicon.png",
         "dev": "vite"
     },
     "devDependencies": {
