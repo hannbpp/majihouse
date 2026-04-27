@@ -63,8 +63,8 @@ export function Services() {
             Layanan.
           </h2>
           <p className="max-w-md font-medium text-muted-foreground">
-            Empat layanan inti dari studio satu pintu. Bukan vendor, kami
-            partner: bantu mikirin strategi, eksekusi, sampai support setelah
+            Empat layanan inti dari studio satu pintu kami. Kami siap
+            jadi partner untuk bantu mikirin strategi, eksekusi, sampai support setelah
             launching.
           </p>
         </div>

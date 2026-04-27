@@ -37,8 +37,7 @@ export function Story() {
           <TextBlockAnimation blockColor="#f59e0b" stagger={0.03}>
             <p className="text-lg md:text-2xl leading-relaxed text-foreground/80">
               Dari Pontianak, <strong>MAJIHOUSE</strong> meracik desain dan
-              kode jadi karya digital yang punya jiwa. Kami partner — bukan
-              vendor — buat brand Indonesia yang nggak puas dengan{" "}
+              kode jadi karya digital yang punya jiwa. Kami partner buat brand Indonesia yang nggak puas dengan{" "}
               <em>"yang penting jadi"</em>. Dari kedai kopi sampai komunitas
               nasional, kami bantu bicara lewat pixel & baris kode.
             </p>

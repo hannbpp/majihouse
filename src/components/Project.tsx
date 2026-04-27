@@ -372,8 +372,8 @@ export function Project() {
             Setiap proyek punya cerita.
           </h2>
           <p className="mt-5 text-muted-foreground md:text-lg">
-            Dari website & sistem operasional sampai branding & social media —
-            klik buat lihat detail tiap karya.
+            Dari website & sistem operasional sampai branding & social media.
+            Klik buat lihat detail tiap karya kami.
           </p>
         </motion.div>
 

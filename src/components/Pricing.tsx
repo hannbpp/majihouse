@@ -102,9 +102,8 @@ export function Pricing() {
             Pilih paket yang sat-set.
           </h2>
           <p className="mt-5 text-muted-foreground md:text-lg">
-            Transparan, sesuai kebutuhan, tanpa drama. Harga estimasi awal —
-            final menyesuaikan kompleksitas fitur & durasi pengerjaan.
-            Konsultasi pertama selalu gratis.
+            Kami mengutamakan transparansi, kebutuhan dan pengalaman user.
+            Konsultasi pertama selalu gratis lho!
           </p>
         </motion.div>
 
@@ -202,7 +201,7 @@ export function Pricing() {
 
         <p className="text-center text-xs text-muted-foreground mt-10 max-w-xl mx-auto">
           *Belum cocok sama paket di atas? Tenang, kami juga buka diskusi
-          custom — chat aja langsung, kita racik bareng.
+          custom kok! chat aja langsung, ntar kita racik bareng.
         </p>
       </div>
     </section>
