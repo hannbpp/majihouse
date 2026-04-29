@@ -176,6 +176,7 @@ const projects: Project[] = [
       "Laporan kehadiran exportable",
       "Multi-role: admin, supervisor, staff",
     ],
+    confidential: true,
   },
   {
     title: "Akademi Competition",
