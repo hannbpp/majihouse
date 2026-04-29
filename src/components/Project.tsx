@@ -22,9 +22,80 @@ type Project = {
   image: string;
   description: string;
   highlights: string[];
+  confidential?: boolean;
 };
 
 const projects: Project[] = [
+  // ── 2026 ──
+  {
+    title: "Dompet Ummat ERP & BIDA",
+    domain: "web",
+    category: "Data & Analytics",
+    type: "Data Warehouse & Decision Support",
+    year: "2026",
+    tech: ["Next.js", "TypeScript", "MySQL", "Recharts", "Leaflet"],
+    image: "/images/portfolio/Dompet Ummat.jpg",
+    description:
+      "Sistem ERP dan Business Intelligence full-stack di atas Data Warehouse MySQL (star schema) untuk Dompet Ummat. Mencakup modul ZISWAF, ambulan, survey kelayakan mustahik, pemetaan spasial GIS, dan segmentasi 4.000+ donatur menggunakan ML clustering — semua algoritma ditulis dari nol di TypeScript.",
+    highlights: [
+      "6 modul: Dashboard, ZISWAF, Ambulan, Survey, Segmentasi ML, Laporan",
+      "ML engine custom (K-Means, K-Medoids, DBSCAN) tanpa library eksternal",
+      "Peta spasial Leaflet/GIS untuk sebaran mustahik di Kalimantan Barat",
+    ],
+    confidential: true,
+  },
+  {
+    title: "Dompet Ummat Landing Page",
+    domain: "web",
+    category: "Landing Page",
+    type: "LAZ Platform",
+    year: "2026",
+    tech: ["Next.js", "TypeScript", "Midtrans", "Tailwind"],
+    image: "/images/portfolio/Dompet Ummat.jpg",
+    description:
+      "Landing page resmi untuk Dompet Ummat, lembaga amil zakat nasional di Kalimantan Barat. Dilengkapi integrasi payment gateway untuk donasi online ZISWAF (Zakat, Infaq, Sedekah, Wakaf) dan CMS internal agar tim bisa kelola konten program, berita, dan laporan secara mandiri tanpa developer.",
+    highlights: [
+      "Payment gateway Midtrans untuk donasi online (VA, QRIS, e-wallet)",
+      "CMS internal untuk kelola program, artikel, dan laporan penyaluran",
+      "Halaman program dinamis dengan progress bar penghimpunan dana",
+    ],
+    confidential: true,
+  },
+  {
+    title: "ASTRA Kalbar HRIS",
+    domain: "web",
+    category: "CMS & Full-stack",
+    type: "HR Information System",
+    year: "2026",
+    tech: ["Next.js", "TypeScript", "MySQL", "Prisma", "NextAuth.js"],
+    image: "/images/portfolio/HRIS ASTRA Kalimantan Barat.png",
+    description:
+      "Aplikasi web internal HRIS untuk Astra Motor Kalimantan Barat — mencakup 14 cabang yang tersebar di seluruh provinsi. Mendigitalisasi pengelolaan data karyawan lintas cabang, pemantauan masa kontrak dengan kalkulasi otomatis, dan menggantikan pencatatan Excel manual menjadi database terpusat yang aman dan bisa diakses real-time dari cabang manapun.",
+    highlights: [
+      "Kelola data karyawan dari 14 cabang Astra di seluruh Kalimantan Barat",
+      "Kalkulasi & indikator otomatis masa kontrak + alert perpanjangan",
+      "RBAC (Admin & Viewer), Audit Log, dan Export Excel/PDF",
+    ],
+    confidential: true,
+  },
+  {
+    title: "ASTRA Kalbar Asset Maintenance",
+    domain: "web",
+    category: "CMS & Full-stack",
+    type: "Asset Management System",
+    year: "2026",
+    tech: ["Next.js", "TypeScript", "MySQL", "Prisma"],
+    image: "/images/portfolio/HRIS ASTRA Kalimantan Barat.png",
+    description:
+      "Sistem manajemen pemeliharaan aset untuk 14 cabang Astra Motor Kalimantan Barat. Mengelola jadwal servis, tracking kondisi aset (AC, genset, kendaraan operasional), riwayat maintenance, dan alert otomatis saat aset mendekati jadwal perawatan — memastikan tidak ada servis yang terlewat di seluruh cabang.",
+    highlights: [
+      "Tracking aset multi-cabang: AC, genset, kendaraan operasional",
+      "Jadwal maintenance otomatis dengan alert reminder",
+      "Riwayat servis lengkap dan laporan biaya per cabang",
+    ],
+    confidential: true,
+  },
+  // ── 2025 ──
   {
     title: "IT FEST 2025",
     domain: "web",
@@ -57,22 +128,7 @@ const projects: Project[] = [
       "Server-rendered Blade buat SEO",
     ],
   },
-  {
-    title: "Marirasa Bakpao",
-    domain: "web",
-    category: "Landing Page",
-    type: "F&B Microsite",
-    year: "2024",
-    tech: ["HTML/CSS", "WA API"],
-    image: "/images/portfolio/marirasaaa.png",
-    description:
-      "Landing page UMKM kuliner dengan integrasi pemesanan langsung via WhatsApp. Ringan, cepat, dan ramah operator non-tech.",
-    highlights: [
-      "Order langsung via WA tanpa cart",
-      "Galeri menu dengan harga update",
-      "Optimasi load di koneksi pas-pasan",
-    ],
-  },
+  // ── 2024 ──
   {
     title: "IFL Chapter Malang",
     domain: "web",
@@ -87,38 +143,6 @@ const projects: Project[] = [
       "Sistem keanggotaan + verifikasi",
       "Modul event RSVP & kalender",
       "CMS internal buat tim konten",
-    ],
-  },
-  {
-    title: "BIDA Analytics",
-    domain: "web",
-    category: "Admin Dashboard",
-    type: "Donor Segmentation Dashboard",
-    year: "2025",
-    tech: ["Next.js", "TypeScript", "MySQL"],
-    image: "/images/portfolio/Dompet Ummat.jpg",
-    description:
-      "Dashboard internal untuk segmentasi 4.000+ donatur aktif Dompet Ummat menggunakan metode RFM + machine learning clustering. Tim fundraising kini bisa bedakan donatur loyal, pasif, hingga yang sudah lama hilang — dan ambil tindakan yang tepat sasaran.",
-    highlights: [
-      "Algoritma K-Means, K-Medoids & DBSCAN ditulis manual di TypeScript",
-      "Export Excel, PDF berformat resmi, dan CSV kontak WhatsApp per segmen",
-      "Cache server 30 menit untuk efisiensi komputasi K-Medoids di 4.000 data",
-    ],
-  },
-  {
-    title: "HRIS Astra",
-    domain: "web",
-    category: "Admin Dashboard",
-    type: "HR Information System",
-    year: "2025",
-    tech: ["Next.js", "TypeScript", "MySQL", "Prisma"],
-    image: "/images/portfolio/HRIS ASTRA Kalimantan Barat.png",
-    description:
-      "Aplikasi web internal HRIS untuk Astra Motor Kalimantan Barat. Mendigitalisasi pengelolaan data karyawan, pemantauan masa kontrak, dan menggantikan pencatatan Excel manual menjadi database terpusat yang aman.",
-    highlights: [
-      "Kalkulasi & indikator otomatis untuk masa kontrak karyawan",
-      "Role-Based Access Control (Admin & Viewer) untuk keamanan data sensitif HR",
-      "Fitur Export Excel/PDF dan Audit Log transparansi perubahan data",
     ],
   },
   {
@@ -186,6 +210,23 @@ const projects: Project[] = [
     ],
   },
   {
+    title: "Marirasa Bakpao",
+    domain: "web",
+    category: "Landing Page",
+    type: "F&B Microsite",
+    year: "2024",
+    tech: ["HTML/CSS", "WA API"],
+    image: "/images/portfolio/marirasaaa.png",
+    description:
+      "Landing page UMKM kuliner dengan integrasi pemesanan langsung via WhatsApp. Ringan, cepat, dan ramah operator non-tech.",
+    highlights: [
+      "Order langsung via WA tanpa cart",
+      "Galeri menu dengan harga update",
+      "Optimasi load di koneksi pas-pasan",
+    ],
+  },
+  // ── Creative ──
+  {
     title: "Pioner Gids",
     domain: "creative",
     category: "Social Media Design",
@@ -233,7 +274,6 @@ const projects: Project[] = [
       "Print-ready buat thank-you card",
     ],
   },
-
 ];
 
 const webCategories = [
@@ -245,6 +285,7 @@ const webCategories = [
   "CMS & Full-stack",
   "Personal Website",
   "Admin Dashboard",
+  "Data & Analytics",
   "UI/UX Design",
 ];
 
@@ -511,6 +552,11 @@ export function Project() {
                           <span className="rounded-full bg-background/95 px-3 py-1 text-[10px] font-bold uppercase tracking-wider backdrop-blur">
                             {p.year}
                           </span>
+                          {p.confidential && (
+                            <span className="rounded-full bg-amber-500/90 text-black px-3 py-1 text-[10px] font-bold uppercase tracking-wider backdrop-blur">
+                              NDA
+                            </span>
+                          )}
                         </div>
                         <div className="absolute bottom-3 right-3 size-9 rounded-full bg-foreground text-background flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                           <ArrowRightIcon className="size-4 -rotate-45" />
@@ -638,6 +684,11 @@ function ProjectModal({ project, onClose }: ModalProps) {
             <span className="rounded-full border border-border px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
               {project.type}
             </span>
+            {project.confidential && (
+              <span className="rounded-full bg-amber-500/90 text-black px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
+                NDA · Confidential
+              </span>
+            )}
           </div>
 
           <div>
