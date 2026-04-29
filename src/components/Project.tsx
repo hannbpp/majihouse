@@ -64,7 +64,7 @@ const projects: Project[] = [
     type: "F&B Microsite",
     year: "2024",
     tech: ["HTML/CSS", "WA API"],
-    image: "/images/portfolio/marirasa.png",
+    image: "/images/portfolio/marirasaaa.png",
     description:
       "Landing page UMKM kuliner dengan integrasi pemesanan langsung via WhatsApp. Ringan, cepat, dan ramah operator non-tech.",
     highlights: [
@@ -90,6 +90,38 @@ const projects: Project[] = [
     ],
   },
   {
+    title: "BIDA Analytics",
+    domain: "web",
+    category: "Admin Dashboard",
+    type: "Donor Segmentation Dashboard",
+    year: "2025",
+    tech: ["Next.js", "TypeScript", "MySQL"],
+    image: "/images/portfolio/Dompet Ummat.jpg",
+    description:
+      "Dashboard internal untuk segmentasi 4.000+ donatur aktif Dompet Ummat menggunakan metode RFM + machine learning clustering. Tim fundraising kini bisa bedakan donatur loyal, pasif, hingga yang sudah lama hilang — dan ambil tindakan yang tepat sasaran.",
+    highlights: [
+      "Algoritma K-Means, K-Medoids & DBSCAN ditulis manual di TypeScript",
+      "Export Excel, PDF berformat resmi, dan CSV kontak WhatsApp per segmen",
+      "Cache server 30 menit untuk efisiensi komputasi K-Medoids di 4.000 data",
+    ],
+  },
+  {
+    title: "HRIS Astra",
+    domain: "web",
+    category: "Admin Dashboard",
+    type: "HR Information System",
+    year: "2025",
+    tech: ["Next.js", "TypeScript", "MySQL", "Prisma"],
+    image: "/images/portfolio/HRIS ASTRA Kalimantan Barat.png",
+    description:
+      "Aplikasi web internal HRIS untuk Astra Motor Kalimantan Barat. Mendigitalisasi pengelolaan data karyawan, pemantauan masa kontrak, dan menggantikan pencatatan Excel manual menjadi database terpusat yang aman.",
+    highlights: [
+      "Kalkulasi & indikator otomatis untuk masa kontrak karyawan",
+      "Role-Based Access Control (Admin & Viewer) untuk keamanan data sensitif HR",
+      "Fitur Export Excel/PDF dan Audit Log transparansi perubahan data",
+    ],
+  },
+  {
     title: "Karvin Badminton",
     domain: "web",
     category: "CMS & Full-stack",
@@ -112,7 +144,7 @@ const projects: Project[] = [
     type: "Sistem Presensi",
     year: "2024",
     tech: ["Laravel", "MySQL"],
-    image: "/images/portfolio/sipenyu-presensi.jpg",
+    image: "/images/portfolio/pioner-gids.jpg",
     description:
       "Sistem presensi digital untuk instansi dengan multi-role admin, supervisor, dan staff. Laporan kehadiran exportable & analytics ringkas.",
     highlights: [
@@ -128,7 +160,7 @@ const projects: Project[] = [
     type: "Payment Gateway",
     year: "2024",
     tech: ["Laravel", "Midtrans"],
-    image: "/images/portfolio/akademi-competition.png",
+    image: "/images/portfolio/akademicompetition.id.png",
     description:
       "Sistem pendaftaran kompetisi berbayar dengan integrasi Midtrans. Auto-generate invoice, status pembayaran realtime, dan e-ticket.",
     highlights: [
@@ -154,35 +186,19 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Inventory System",
-    domain: "web",
-    category: "Admin Dashboard",
-    type: "Stok Multi-Cabang",
+    title: "Pioner Gids",
+    domain: "creative",
+    category: "Social Media Design",
+    type: "Branded Content",
     year: "2024",
-    tech: ["Laravel", "Livewire", "Tailwind"],
-    image: "/images/portfolio/inventory-system.png",
+    tech: ["Photoshop", "Illustrator"],
+    image: "/images/portfolio/sipenyu-presensi.jpg",
     description:
-      "Sistem stok realtime untuk usaha retail multi-cabang. Alert stok minimum, transfer antar gudang, dan laporan harian otomatis.",
+      "Content kit social media untuk komunitas e-sport. Mulai dari announcement match, recap result, sampai highlight player.",
     highlights: [
-      "Multi-cabang & multi-gudang",
-      "Realtime update tanpa reload (Livewire)",
-      "Alert otomatis saat stok minimum",
-    ],
-  },
-  {
-    title: "Karvin Admin Panel",
-    domain: "web",
-    category: "Admin Dashboard",
-    type: "Operasional UKM",
-    year: "2024",
-    tech: ["Laravel", "Filament", "MySQL"],
-    image: "/images/portfolio/admin-panel.png",
-    description:
-      "Dashboard admin lengkap buat operasional unit usaha. Booking, member, finance, dan reporting — semua satu panel pakai Filament.",
-    highlights: [
-      "Booking lapangan + cek slot otomatis",
-      "Manajemen member & saldo",
-      "Laporan keuangan exportable",
+      "Template match-day siap edit",
+      "Player card customizable",
+      "Recap weekly auto-format",
     ],
   },
   {
@@ -217,22 +233,7 @@ const projects: Project[] = [
       "Print-ready buat thank-you card",
     ],
   },
-  {
-    title: "Pioner Gids",
-    domain: "creative",
-    category: "Social Media Design",
-    type: "Branded Content",
-    year: "2024",
-    tech: ["Photoshop", "Illustrator"],
-    image: "/images/portfolio/pioner-gids.jpg",
-    description:
-      "Content kit social media untuk komunitas e-sport. Mulai dari announcement match, recap result, sampai highlight player.",
-    highlights: [
-      "Template match-day siap edit",
-      "Player card customizable",
-      "Recap weekly auto-format",
-    ],
-  },
+
 ];
 
 const webCategories = [
