@@ -208,6 +208,7 @@ const projects: Project[] = [
       "Multi-channel pembayaran",
       "Reporting transaksi harian",
     ],
+    confidential: true,
   },
   {
     title: "Marirasa Bakpao",

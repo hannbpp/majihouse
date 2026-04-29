@@ -11,22 +11,22 @@ type Project = {
 const projects: Project[] = [
   {
     color: "#0f172a",
-    src: "/images/portfolio/itfest-2025.png",
+    src: "/images/portfolio/akademicompetition.id.png",
     title: "Web Development",
   },
   {
     color: "#1e293b",
-    src: "/images/portfolio/ifl-malang.png",
+    src: "/images/portfolio/pioner-gids.jpg",
     title: "System Development",
   },
   {
     color: "#475569",
-    src: "/images/portfolio/inventory-system.png",
+    src: "/images/portfolio/Dompet Ummat.jpg",
     title: "Data Analytics",
   },
   {
     color: "#1f2937",
-    src: "/images/portfolio/kbmdsi-2025.png",
+    src: "/images/portfolio/itfest-2025.png",
     title: "UI/UX Design",
   },
 ];
