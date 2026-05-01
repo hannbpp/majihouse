@@ -108,7 +108,7 @@ const techLogos = [
   { src: "https://cdn.simpleicons.org/figma/000000", alt: "Figma" },
   { src: "https://cdn.simpleicons.org/laravel/000000", alt: "Laravel" },
   { src: "https://cdn.simpleicons.org/vuedotjs/000000", alt: "Vue.js" },
-  { src: "https://cdn.simpleicons.org/adobephotoshop/000000", alt: "Photoshop" },
-  { src: "https://cdn.simpleicons.org/adobeillustrator/000000", alt: "Illustrator" },
-  { src: "https://cdn.simpleicons.org/canva/000000", alt: "Canva" },
+  { src: "/logos/adobe-ps.svg", alt: "Photoshop" },
+  { src: "/logos/adobe-ai.svg", alt: "Illustrator" },
+  { src: "/logos/adobe-ae.svg", alt: "After Effects" },
 ];
