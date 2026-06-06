@@ -28,7 +28,7 @@ type Project = {
 const projects: Project[] = [
   // ── 2026 ──
   {
-    title: "BAP Enterprise Platform",
+    title: "PT BAP Enterprise Platform",
     domain: "web",
     category: "CMS & Full-stack",
     type: "Enterprise ERP & BI Suite",
