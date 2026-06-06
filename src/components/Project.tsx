@@ -28,6 +28,23 @@ type Project = {
 const projects: Project[] = [
   // ── 2026 ──
   {
+    title: "BAP Enterprise Platform",
+    domain: "web",
+    category: "CMS & Full-stack",
+    type: "Enterprise ERP & BI Suite",
+    year: "2026",
+    tech: ["Next.js", "NestJS", "PostgreSQL", "Redis", "FastAPI", "Docker"],
+    image: "/images/portfolio/bap logo.png",
+    description:
+      "Platform enterprise end-to-end untuk PT Bina Area Persada — vendor tenaga pemasar Bank Kalbar. Mencakup 4 modul inti: Credit Calculator & Pre-Screening Engine dengan ML scoring, HRIS multi-cabang (payroll, attendance, recruitment), Whistleblowing System anonim sesuai ISO 37002, dan Sales Performance BI Dashboard dengan lead scoring dan demand forecasting.",
+    highlights: [
+      "4 modul: Credit Engine, HRIS, Whistleblowing, Sales BI Dashboard",
+      "ML credit scoring (WoE, Logistic Regression Scorecard, SHAP explainability)",
+      "IAM enterprise: SSO OAuth2, RBAC 7-tier, MFA, audit trail immutable",
+    ],
+    confidential: true,
+  },
+  {
     title: "Dompet Ummat ERP & BIDA",
     domain: "web",
     category: "Data & Analytics",
