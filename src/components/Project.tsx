@@ -556,12 +556,12 @@ export function Project() {
                         "transition-all hover:border-foreground/40 hover:shadow-2xl"
                       )}
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                      <div className={cn("relative aspect-[4/3] overflow-hidden", p.image.includes("logo") ? "bg-white dark:bg-neutral-900 flex items-center justify-center p-10" : "bg-muted")}>
                         <img
                           src={p.image}
                           alt={p.title}
                           loading="lazy"
-                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          className={cn("transition-transform duration-700 group-hover:scale-105", p.image.includes("logo") ? "h-full w-full object-contain dark:invert" : "h-full w-full object-cover")}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         <div className="absolute top-3 left-3 flex gap-2">
@@ -684,11 +684,11 @@ function ProjectModal({ project, onClose }: ModalProps) {
           <XIcon className="size-4" />
         </button>
 
-        <div className="relative aspect-video bg-muted overflow-hidden">
+        <div className={cn("relative aspect-video overflow-hidden", project.image.includes("logo") ? "bg-white dark:bg-neutral-900 flex items-center justify-center p-12" : "bg-muted")}>
           <img
             src={project.image}
             alt={project.title}
-            className="h-full w-full object-cover"
+            className={cn(project.image.includes("logo") ? "h-full w-full object-contain dark:invert" : "h-full w-full object-cover")}
           />
         </div>
 
